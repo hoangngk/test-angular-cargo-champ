@@ -1,6 +1,7 @@
 <div class="page">
-  <div class="main-title">Offers</div>
-
+  <div class="main-title">
+    {{ "OFFERSPAGE.title" | translate }}
+  </div>
   <nb-card>
     <nb-card-header>
       <ngx-action-header
@@ -9,10 +10,9 @@
       ></ngx-action-header>
     </nb-card-header>
     <ng2-smart-table
-    class="offers-table"
+      [ngClass]="hideCols"
       [settings]="settings"
       [source]="source"
-      (deleteConfirm)="onDeleteConfirm($event)"
     >
     </ng2-smart-table>
   </nb-card>

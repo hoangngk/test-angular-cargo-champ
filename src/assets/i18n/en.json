@@ -142,7 +142,12 @@
     "editBtn": "Edit",
     "deleteBtn": "Delete",
     "backBtn": "Back to Page",
-    "formFields": ["Name", "Type", "Opening Time", "Contact Details"],
+    "formFields": [
+      "Name",
+      "Type",
+      "Opening Time",
+      "Contact Details"
+    ],
     "subTable": {
       "title": "Locations",
       "searchPlaceholder": "Search"
@@ -213,17 +218,24 @@
     "counterPartyType": [
       {
         "title": "Both",
-        "value": ["SUPPLIER", "CONSUMER"],
+        "value": [
+          "SUPPLIER",
+          "CONSUMER"
+        ],
         "keyCode": 0
       },
       {
         "title": "SUPPLIER",
-        "value": ["SUPPLIER"],
+        "value": [
+          "SUPPLIER"
+        ],
         "keyCode": 1
       },
       {
         "title": "CONSUMER",
-        "value": ["CONSUMER"],
+        "value": [
+          "CONSUMER"
+        ],
         "keyCode": 2
       }
     ],
@@ -363,7 +375,12 @@
         "mainTitle": "Trips",
         "title": "",
         "error": "",
-        "fields": ["Trip", "Amount", "Status", "Comments"],
+        "fields": [
+          "Trip",
+          "Amount",
+          "Status",
+          "Comments"
+        ],
         "button": "ADD"
       },
       {
@@ -596,7 +613,13 @@
     "title": "Order",
     "add": "Add",
     "edit": "Edit",
-    "formFields": ["Note", "Billed To", "Status", "Type", "Offer Date"],
+    "formFields": [
+      "Note",
+      "Billed To",
+      "Status",
+      "Type",
+      "Offer Date"
+    ],
     "formFieldsTop": {
       "formFields": [
         "Billed to Contact",
@@ -606,7 +629,10 @@
         "Reference",
         "To refer to"
       ],
-      "buttons": ["Add New", "Add New Transaction +"]
+      "buttons": [
+        "Add New",
+        "Add New Transaction +"
+      ]
     },
     "orderType": [
       {
@@ -677,18 +703,57 @@
       }
     ]
   },
+  "OFFERSPAGE": {
+    "title": "Offers"
+  },
+  "OFFERSVIEWPAGE": {
+    "title": "Offers",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": [
+      "ID",
+      "Billed To",
+      "Valid from - Valid To",
+      "Reference",
+      "To refer to"
+    ],
+    "subTable": {
+      "title": "Details"
+    }
+  },
+  "OFFERADDEDITTPAGE": {
+    "title": "Offers",
+    "add": "Add",
+    "edit": "Edit",
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "OFFERSFILTERPAGE": {
+    "title": "Offers - View"
+  },
   "DRIVERSVIEWPAGE": {
     "title": "Driver",
     "info": "Basic Information",
     "editBtn": "Edit",
     "deleteBtn": "Delete",
     "backBtn": "Back to Page",
-    "formFields": ["Vehicle", "Category", "Number Plate"],
+    "formFields": [
+      "Vehicle",
+      "Category",
+      "Number Plate"
+    ],
     "subTable": {
       "title": "Tours"
     }
   },
-
   "DRIVERSADDEDITTPAGE": {
     "title": "Driver",
     "add": "Add",
@@ -887,7 +952,9 @@
         ]
       }
     ],
-    "notes": ["Notes"],
+    "notes": [
+      "Notes"
+    ],
     "action": {
       "back": {
         "title": "Back"
@@ -938,9 +1005,16 @@
     "title": "Price",
     "add": "Add",
     "edit": "Edit",
-    "formFields": ["Name", "Counter Party", "Location"],
+    "formFields": [
+      "Name",
+      "Counter Party",
+      "Location"
+    ],
     "formFieldsMaterial": {
-      "headers": ["Material", "Price"],
+      "headers": [
+        "Material",
+        "Price"
+      ],
       "formFields": [
         "Material",
         "New Material",
@@ -949,7 +1023,12 @@
         "Price per unit",
         "Unit of measurement"
       ],
-      "buttons": ["Add New", "Cancel", "Confirm", "Add Material"]
+      "buttons": [
+        "Add New",
+        "Cancel",
+        "Confirm",
+        "Add Material"
+      ]
     },
     "action": {
       "back": {
@@ -985,7 +1064,12 @@
     "editBtn": "Edit",
     "deleteBtn": "Delete",
     "backBtn": "Back to Page",
-    "formFields": ["Vehicle", "Category", "Material Group", "License Number"],
+    "formFields": [
+      "Vehicle",
+      "Category",
+      "Material Group",
+      "License Number"
+    ],
     "subTable": {
       "title": ""
     }
@@ -1047,7 +1131,11 @@
     "editBtn": "Edit",
     "deleteBtn": "Delete",
     "backBtn": "Back to Page",
-    "formFields": ["Vehicle", "Category", "Number Plate"],
+    "formFields": [
+      "Vehicle",
+      "Category",
+      "Number Plate"
+    ],
     "subTable": {
       "title": ""
     }
@@ -1112,17 +1200,24 @@
   "locationType": [
     {
       "title": "Both",
-      "value": ["LOADING", "UNLOADING"],
+      "value": [
+        "LOADING",
+        "UNLOADING"
+      ],
       "keyCode": 3
     },
     {
       "title": "LOADING",
-      "value": ["LOADING"],
+      "value": [
+        "LOADING"
+      ],
       "keyCode": 1
     },
     {
       "title": "UNLOADING",
-      "value": ["UNLOADING"],
+      "value": [
+        "UNLOADING"
+      ],
       "keyCode": 2
     }
   ]

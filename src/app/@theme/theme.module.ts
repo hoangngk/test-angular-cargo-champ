@@ -62,6 +62,7 @@ import { VehiclesListComponent } from './components/custom-rander/vehicles-list/
 import { TrailersListComponent } from './components/custom-rander/trailers-list/trailers-list.component';
 import { TripListComponent } from './components/custom-rander/trip-list/trip-list.component';
 import { RadioAndCheckBoxComponent } from './components/forms/radio-and-checkbox.component';
+import { OffersListComponent } from './components/custom-rander/offers-list/offers-list.component';
 
 
 const NB_MODULES = [
@@ -116,7 +117,8 @@ const COMPONENTS = [
   CellComponent,
   ClassNameComponent,
   ContactComponent,
-  RadioAndCheckBoxComponent
+  RadioAndCheckBoxComponent,
+  OffersListComponent
 ];
 const PIPES = [
   CapitalizePipe,

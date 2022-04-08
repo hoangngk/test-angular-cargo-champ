@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { ListComponent } from "./list/list.component";
 import { OffersComponent } from "./offers.components";
+import { ViewComponent } from "./view/view.component";
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
       {
         path: "",
         component: ListComponent,
+      },
+      {
+        path: "view/:matId",
+        component: ViewComponent,
       },
     ],
   },

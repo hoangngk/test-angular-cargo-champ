@@ -1,0 +1,22 @@
+<nb-card class="full">
+  <nb-card-header>
+    {{
+      data
+        ? ("OFFERADDEDITTPAGE.edit" | translate)
+        : ("OFFERADDEDITTPAGE.add" | translate)
+    }}
+    {{ "OFFERADDEDITTPAGE.title" | translate }}
+  </nb-card-header>
+  <nb-card-body>Data id: {{ data }}</nb-card-body>
+  <nb-card-footer>
+    <div class="action">
+      <button nbButton (click)="dismiss()">
+        {{ "OFFERADDEDITTPAGE.action.back.title" | translate }}
+      </button>
+
+      <button nbButton status="primary" (click)="saveMaterialDetails()">
+        {{ "OFFERADDEDITTPAGE.action.confirm.title" | translate }}
+      </button>
+    </div>
+  </nb-card-footer>
+</nb-card>
