@@ -1,0 +1,3 @@
+<nb-select (selectedChange)="clickType($event)" class="three-dot">
+    <nb-option *ngFor="let type of threeDots" [value]="type.title" class="custom-menu"> {{ type.title }}</nb-option>
+</nb-select>

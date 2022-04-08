@@ -1,0 +1,1117 @@
+{
+  "ACTIONHEADER": {
+    "placeholder": "Suche",
+    "newBtn": "Neu",
+    "filterOptions": [
+      {
+        "title": "Anpassen",
+        "value": "custom"
+      },
+      {
+        "title": "Alles zeigen",
+        "value": "all"
+      }
+    ],
+    "actionCommon": {
+      "back": {
+        "title": "Zurück"
+      },
+      "confirm": {
+        "title": "Bestätigen"
+      }
+    }
+  },
+  "MATERIALPAGE": {
+    "title": "Materialien",
+    "search_placeholder": "Suche",
+    "filterPlaceholder": [
+      {
+        "title": "Alles zeigen",
+        "value": "all"
+      },
+      {
+        "title": "Anpassen",
+        "value": "custom"
+      }
+    ],
+    "newButton": "Neu",
+    "tableSetting": []
+  },
+  "MATERIALVIEWPAGE": {
+    "title": "Materialien",
+    "info": "Stammdaten",
+    "editBtn": "Bearbeiten",
+    "deleteBtn": "Löschen",
+    "backBtn": "Zurück zur Seite",
+    "formFields": [
+      "Artikelnummern",
+      "Artikelname",
+      "Materialgruppe",
+      "Kurze Beschreibung",
+      "Granulation",
+      "Maßeinheit",
+      "Dichte (t/m^3)"
+    ],
+    "locations": {
+      "title": "Lade-/Endladestellen",
+      "searchPlaceholder": ""
+    }
+  },
+  "MATERIALADDEDITTPAGE": {
+    "title": "Material",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "formFields": [
+      {
+        "title": "Materialname",
+        "error": "Materialname ist erforderlich."
+      },
+      {
+        "title": "Artikelnummer",
+        "error": "Artikelnummer ist erforderlich."
+      },
+      {
+        "title": "Materialgruppe",
+        "error": "Materialgruppe ist erforderlich."
+      },
+      {
+        "title": "Kurze Beschreibung",
+        "error": "Kurze Beschreibung ist erforderlich."
+      },
+      {
+        "title": "Granulation",
+        "error": "Granulation ist erforderlich."
+      },
+      {
+        "title": "Maßeinheit",
+        "error": "Maßeinheit ist erforderlich."
+      },
+      {
+        "title": "Dichte (t/m^3)",
+        "error": "Dichte ist erforderlich."
+      },
+      {
+        "title": "Züge",
+        "error": "."
+      },
+      {
+        "title": "Lade-/Endladestellen wählen",
+        "error": "Lade-/Endladestellen ist erforderlich.",
+        "label": "Lade-/Endladestellen Hinzufügen"
+      },
+      {
+        "title": "Neue Lade-/Endladestellen Name",
+        "label": "Neue Hinzufügen"
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Zurück"
+      },
+      "confirm": {
+        "title": "Bestätigen"
+      }
+    }
+  },
+  "MATERIALFILTERPAGE": {
+    "title": "Ansicht Anpassen"
+  },
+  "CONTACTPAGE": {
+    "title": "Kontakte",
+    "search_placeholder": "Suche",
+    "tab": [
+      {
+        "title": "Lieferanten"
+      },
+      {
+        "title": "Kunden"
+      },
+      {
+        "title": "Beides"
+      },
+      {
+        "title": "Nicht zugewiesen"
+      }
+    ],
+    "newButton": "Neu",
+    "tableSetting": []
+  },
+  "COUNTERPARTYVIEWPAGE": {
+    "title": "Kontakte",
+    "info": "Stammdaten",
+    "editBtn": "Bearbeiten",
+    "deleteBtn": "Löschen",
+    "backBtn": "Zurück zur Seite",
+    "formFields": ["Name", "Öffnungszeit", "Die Anschrift", "Ansprechpartner"],
+    "subTable": {
+      "title": "Lade-/Endladestellen",
+      "searchPlaceholder": "Suche"
+    }
+  },
+  "COUNTERPARTYADDPAGE": {
+    "title": "Kontakt",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "formFields": [
+      {
+        "title": "Kontaktname",
+        "error": "Kontaktname ist erforderlich!"
+      },
+      {
+        "title": "Kurze Beschreibung",
+        "error": "Kurze Beschreibung ist erforderlich!"
+      },
+      {
+        "title": "Kontakttyp",
+        "error": "Kontakttyp ist erforderlich!"
+      },
+      {
+        "error": "Lade-/Endladestelle ist erforderlich!",
+        "title": "Lade-/Endladestelle",
+        "label": "Lade-/Endladestelle Hinzufügen"
+      },
+      {
+        "title": "Neue Lade-/Endladestelle",
+        "label": "Neue Hinzufügen"
+      },
+      {
+        "title": "Ansprechpartner",
+        "error": "Ansprechpartner ist erforderlich!"
+      },
+      {
+        "title": "E-mail",
+        "error": "E-mail ist erforderlich!"
+      },
+      {
+        "title": "Handynummer",
+        "error": "Handynummer ist erforderlich!"
+      },
+      {
+        "title": "Telefonnummer",
+        "error": "Telefonnummer ist erforderlich!"
+      },
+      {
+        "title": "Öffnungszeit",
+        "error": ""
+      },
+      {
+        "title": "Tag",
+        "error": ""
+      },
+      {
+        "title": "Startzeit",
+        "error": ""
+      },
+      {
+        "title": "Endzeit",
+        "error": ""
+      },
+      {
+        "title": "HINZUFÜGEN"
+      }
+    ],
+    "counterPartyType": [
+      {
+        "title": "Beides",
+        "value": ["Lieferanten", "Kunden"],
+        "keyCode": 0
+      },
+      {
+        "title": "Lieferanten",
+        "value": ["Lieferanten"],
+        "keyCode": 1
+      },
+      {
+        "title": "Kunden",
+        "value": ["Kunden"],
+        "keyCode": 2
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Zurück"
+      },
+      "confirm": {
+        "title": "Bestätigen"
+      }
+    }
+  },
+  "COUNTERFILTERPAGE": {
+    "title": "Ansicht Anpassen"
+  },
+  "TOURSPAGE": {
+    "title": "Touren",
+    "tab": [
+      {
+        "title": "Ladestellen"
+      },
+      {
+        "title": "Endladestellen"
+      },
+      {
+        "title": "Beides"
+      }
+    ],
+    "search_placeholder": "Suche",
+    "filterPlaceholder": [
+      {
+        "title": "Alles zeigen",
+        "value": "all"
+      },
+      {
+        "title": "Anpassen",
+        "value": "custom"
+      }
+    ],
+    "newButton": "Neu",
+    "tableSetting": []
+  },
+  "TOURSVIEWPAGE": {
+    "title": "Touren",
+    "info": "Stammdaten",
+    "editBtn": "Bearbeiten",
+    "deleteBtn": "Löschen",
+    "backBtn": "Zurück zur Seite",
+    "formFields": [
+      "Ladestellen",
+      "Entladestelle",
+      "Typ",
+      "Status",
+      "Material",
+      "Menge",
+      "Maßeinheit",
+      "Auslieferungs Deadline",
+      "Ausführungsdatum",
+      "Fahrer",
+      "Anmerkung",
+      "Angebote/Bestellungen"
+    ],
+    "subTable": {
+      "title": "Einzelfahrten",
+      "searchPlaceholder": "Suche"
+    }
+  },
+  "TOURSFILTERPAGE": {
+    "title": "Ansicht Anpassen"
+  },
+  "TOURSADDEDITTPAGE": {
+    "title": "Touren",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "formFields": [
+      {
+        "title": "Ladestellen",
+        "error": "Ladestellen ist erforderlich!"
+      },
+      {
+        "title": "Endladestellen",
+        "error": "Endladestellen ist erforderlich!"
+      },
+      {
+        "title": "Kontakt",
+        "error": "Kontakt ist erforderlich"
+      },
+      {
+        "title": "Material",
+        "error": ""
+      },
+      {
+        "title": "Betrag",
+        "error": ""
+      },
+      {
+        "title": "Ausführungsdatum",
+        "error": ""
+      },
+      {
+        "title": "Auflieger",
+        "error": ""
+      },
+      {
+        "title": "Angebot verknüpfen",
+        "error": ""
+      },
+      {
+        "title": "Art der Tour",
+        "error": ""
+      },
+      {
+        "title": "Status",
+        "error": ""
+      },
+      {
+        "title": "Menge",
+        "error": ""
+      },
+      {
+        "title": "Maßeinheit",
+        "error": ""
+      },
+      {
+        "title": "Auslieferungs Deadline",
+        "error": ""
+      },
+      {
+        "title": "Ausführungsdatum",
+        "error": ""
+      },
+      {
+        "title": "Fahrer",
+        "error": ""
+      },
+      {
+        "mainTitle": "Einzelfahrten",
+        "title": "",
+        "error": "",
+        "fields": ["Einzelfahrt ", "Menge", "Status", "Anmerkung"],
+        "button": "HINZUFÜGEN"
+      },
+      {
+        "title": "Anmerkung",
+        "error": ""
+      }
+    ],
+    "toursType": [
+      {
+        "const": "TRADE",
+        "description": "Handel"
+      },
+      {
+        "const": "DISPOSAL",
+        "description": "Entsorgung"
+      },
+      {
+        "const": "FREIGHT",
+        "description": "Fracht"
+      }
+    ],
+    "toursStatus": [
+      {
+        "const": "OPEN",
+        "description": "Offene Einzelfahrten"
+      },
+      {
+        "const": "TRIPS-COMPLETED",
+        "description": "Abgeschlossene Einzelfahrten"
+      },
+      {
+        "const": "FINISHED",
+        "description": "Abgeschlossene Tour"
+      }
+    ],
+    "trailerCategoryType": [
+      {
+        "const": "KIPPER-DUMP-TRUCK",
+        "description": "Kipper"
+      },
+      {
+        "const": "TAILGATE ",
+        "description": "Heckklappe "
+      },
+      {
+        "const": "CANVAS-COVER",
+        "description": "Plane"
+      },
+      {
+        "const": "OTHER",
+        "description": "Weitere Aufliegerkategorien"
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Zurück"
+      },
+      "confirm": {
+        "title": "Bestätigen"
+      }
+    }
+  },
+  "LOCATIONSPAGE": {
+    "title": "Lade-/Endladestellen",
+    "search_placeholder": "Suche",
+    "newButton": "Neu",
+    "tableSetting": [],
+    "tab": [
+      {
+        "title": "Ladestellen"
+      },
+      {
+        "title": "Endladestellen"
+      },
+      {
+        "title": "Beide"
+      },
+      {
+        "title": "Nicht zugewiesen"
+      }
+    ]
+  },
+  "LOCATIONSVIEWPAGE": {
+    "title": "Lade-/Endladestellen",
+    "info": "Stammdaten",
+    "editBtn": "Bearbeiten",
+    "deleteBtn": "Löschen",
+    "backBtn": "Zurück zur Seite",
+    "formFields": [
+      "Name",
+      "Kurze Beschreibung",
+      "Anschrift",
+      "Kontakte",
+      "Opening Time"
+    ],
+    "subTable": {
+      "title": "Materialien",
+      "searchPlaceholder": "Suche"
+    }
+  },
+  "LOCATIONSADDPAGE": {
+    "title": "Lade-/Endladestellen",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "formFields": [
+      {
+        "title": "Kontakt",
+        "error": "Kontakt ist erforderlich!"
+      },
+      {
+        "title": "Lade-/Endladestellen Name",
+        "error": "Lade-/Endladestellen Name ist erforderlich!"
+      },
+      {
+        "title": "kurze Beschreibung",
+        "error": "Beschreibung erforderlich!"
+      },
+      {
+        "title": "Straße",
+        "error": "Straße ist erforderlich!"
+      },
+      {
+        "title": "Postleitzahl",
+        "error": "Postleitzahl ist erforderlich!"
+      },
+      {
+        "title": "Ort",
+        "error": "Ort ist erforderlich!"
+      },
+      {
+        "title": "Land",
+        "error": "Land ist erforderlich!"
+      },
+      {
+        "title": "Ansprechpartner",
+        "error": "Ansprechpartner ist erforderlich!"
+      },
+      {
+        "title": "E-mail",
+        "error": "E-mail ist erforderlich!"
+      },
+      {
+        "title": "Handynummer",
+        "error": "Handynummer ist erforderlich!"
+      },
+      {
+        "title": "Telefonnummer",
+        "error": "Telefonnummer ist erforderlich!"
+      },
+      {
+        "title": "Kontakt wählen",
+        "error": "Kontakt ist erforderlich!",
+        "label": "Kontakt Hinzufügen"
+      },
+      {
+        "title": "Neue Kontakt",
+        "label": "Neue Kontakt"
+      },
+      {
+        "title": "Lade-/Endladestellen Typ",
+        "error": "Lade-/Endladestellen Typ ist erforderlich!"
+      },
+      {
+        "title": "Öffnungszeiten",
+        "error": ""
+      },
+      {
+        "title": "Tag",
+        "error": ""
+      },
+      {
+        "title": "Startzeit",
+        "error": ""
+      },
+      {
+        "title": "Endzeit",
+        "error": ""
+      },
+      {
+        "title": "HINZUFÜGEN"
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Zurück"
+      },
+      "confirm": {
+        "title": "Bestätigen"
+      }
+    }
+  },
+  "LOCATIONSFILTERPAGE": {
+    "title": "Ansicht Anpassen"
+  },
+  "ORDERSPAGE": {
+    "title": "Angebote/Bestellungen",
+    "search_placeholder": "Suche",
+    "newButton": "Neu",
+    "tableSetting": [],
+    "tab": [
+      {
+        "title": "Ladestellen"
+      },
+      {
+        "title": "Endladestellen"
+      },
+      {
+        "title": "Beide"
+      }
+    ]
+  },
+  "ORDERSVIEWPAGE": {
+    "title": "Angebote/Bestellungen",
+    "info": "Stammdaten",
+    "editBtn": "Bearbeiten",
+    "deleteBtn": "Löschen",
+    "backBtn": "Zurück zur Seite",
+    "formFields": [
+        "ID",
+        "Rechnung geschickt an",
+        " Gültigkeit von -  Gültigkeit bis",
+        "Referenz",
+        "To refer to"
+      ],
+    "subTable": {
+      "title": "Details"
+    }
+  },
+  "ORDERADDEDITTPAGE": {
+    "title": "Bestellungen",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "formFields": [
+      "Note",
+      "Rechnung geschickt an",
+      "Status",
+      "Typ",
+      "Angebotsdatum"
+    ],
+    "orderStatus": [
+      {
+        "const": "TRADE",
+        "description": "Handel"
+      },
+      {
+        "const": "DISPOSAL",
+        "description": "Entsorgung"
+      },
+      {
+        "const": "FREIGHT",
+        "description": "Fracht"
+      }
+    ],
+    "orderType": [
+      {
+        "const": "OFFER",
+        "description": "​​Angebot"
+      },
+      {
+        "const": "SINGLE",
+        "description": "Einfach"
+      },
+      {
+        "const": "MULTI",
+        "description": "Multi"
+      },
+      {
+        "const": "IN-TRANSITION",
+        "description": "Transaktion"
+      },
+      {
+        "const": "PAID-IN-FULL",
+        "description": "Bezahlt"
+      },
+      {
+        "const": "TOUR-COMPLETE",
+        "description": "Abgeschlossen"
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Zurück"
+      },
+      "confirm": {
+        "title": "Bestätigen"
+      }
+    }
+  },
+  "ORDERSFILTERPAGE": {
+    "title": "Ansicht Anpassen"
+  },
+  "DRIVERSPAGE": {
+   "title": "Fahrer",
+   "search_placeholder": "Suche",
+   "newButton": "Neu",
+   "tableSetting": [],
+   "tab": [
+     {
+       "title": "Ladestellen"
+     },
+     {
+       "title": "Endladestellen"
+     },
+     {
+       "title": "Beide"
+     }
+   ]
+ },
+  "DRIVERSADDEDITTPAGE": {
+   "title": "Fahrer",
+   "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+   "formHeaderTitles": [
+     "Kontaktdetails",
+     "Führerschein ",
+     "Fahrerkarte ",
+     "Urlaubstage",
+     "Lohnart",
+     "Eigenschaften",
+     "Übernachtung",
+     "Ausrüstung im LKW",
+     "Notizfeld"
+   ],
+   "formFields": [
+     "Vorname",
+     "Nachname",
+     "Straße",
+     "Ort",
+     "Postleitzahl",
+     "Land",
+     "Telefonnummer",
+     "Handynummer",
+     "Email",
+     "Geburtsdatum",
+     "Staatsbürgerschaft",
+     "Sprache"
+   ],
+   "formFieldDriverLicence": [
+     "Führerscheinnummer",
+     "Führerscheinklassen",
+     "Führerschein",
+     "Schlüsselzahl 95 ",
+     "Gültig bis"
+   ],
+   "formFieldDriverScorecard": [
+     "Fahrerkarte Nummer",
+     "Fahrerkarte Bild",
+     "Gültig bis"
+   ],
+   "formFieldVacationDetails": [
+     "Urlaubstage Jahr",
+     "Resturlaub vom Vorjahr",
+     "tage"
+   ],
+   "wageType": [
+     {
+       "label": "Lohnart",
+       "type": "radio",
+       "values": [
+         {
+           "label": "Stundenlohn",
+           "value": "hourly"
+         },
+         {
+           "label": "Gehalt",
+           "value": "salary"
+         },
+         {
+           "label": "Aushilfe",
+           "value": "temporary"
+         }
+       ]
+     }
+   ],
+   "bodyType": [
+     {
+       "label": "Aufbautyp",
+       "type": "checkbox",
+       "values": [
+         {
+           "label": "Absetzcontainer",
+           "value": "skip-container"
+         },
+         {
+           "label": "Abrollcontainer",
+           "value": "roll-off-container"
+         },
+         {
+           "label": "Betonwagen",
+           "value": "concrete-wagon"
+         },
+         {
+           "label": "Kipper",
+           "value": "dump-truck"
+         },
+         {
+           "label": "Schubboden",
+           "value": "moving-floor"
+         },
+         {
+           "label": "Tieflader",
+           "value": "low-loader"
+         }
+       ]
+     }
+   ],
+   "goodsType": [
+     {
+       "label": "Ware",
+       "type": "checkbox",
+       "values": [
+         {
+           "label": "Allrad",
+           "value": "all-wheel-drive"
+         },
+         {
+           "label": "Asphalt",
+           "value": "asphalt"
+         },
+         {
+           "label": "Wasserbausteine",
+           "value": "armourstones"
+         },
+         {
+           "label": "Branntkalk",
+           "value": "quicklime"
+         }
+       ]
+     }
+   ],
+   "skillType": [
+     {
+       "label": "Laden",
+       "type": "checkbox",
+       "values": [
+         {
+           "label": "selbst beladen Bagger ",
+           "value": "use-an-excavator"
+         },
+         {
+           "label": "selbst beladen Radlader ",
+           "value": "use-a-forklift"
+         },
+         {
+           "label": "selbst beladen Stapler",
+           "value": "use-a-wheeloader"
+         }
+       ]
+     }
+   ],
+   "lorryType": [
+     {
+       "label": "Fahrzeugtyp",
+       "type": "checkbox",
+       "values": [
+         {
+           "label": "Solo LKW",
+           "value": "single-lorry"
+         },
+         {
+           "label": "Sattelzug",
+           "value": "semi-trailer-articulated-lorry"
+         },
+         {
+           "label": "Anhänger",
+           "value": "trailer"
+         }
+       ]
+     }
+   ],
+   "frequencyType": [
+     {
+       "label": "Übernachtung",
+       "type": "radio",
+       "values": [
+         {
+           "label": "Übernachtung",
+           "value": "YES"
+         },
+         {
+           "label": "Übernachtung gelegentlich",
+           "value": "OCCASIONALLY"
+         },
+         {
+           "label": "keine Übernachtung",
+           "value": "NO"
+         }
+       ]
+     }
+   ],
+   "equipmentIn": [
+     {
+       "label": "Ausrüstung im LKW",
+       "type": "checkbox",
+       "values": [
+         {
+           "label": "Drucker",
+           "value": "printer"
+         },
+         {
+           "label": "Scanner",
+           "value": "scanner"
+         }
+       ]
+     }
+   ],
+   "notes": ["Notes"],
+   "action": {
+     "back": {
+       "title": "Back"
+     },
+     "confirm": {
+       "title": "Confirm"
+     }
+   }
+ },
+ "DRIVERSFILTERPAGE": {
+   "title": "Drivers - View"
+ },
+  "PRICEPAGE": {
+    "title": "Preise",
+    "search_placeholder": "Suche",
+    "filterPlaceholder": [
+      {
+        "title": "Alles zeigen",
+        "value": "all"
+      },
+      {
+        "title": "Anpassen",
+        "value": "custom"
+      }
+    ],
+    "newButton": "Nue",
+    "tableSetting": []
+  },
+  "PRICESVIEWPAGE": {
+    "title": "Preise",
+    "info": "Stammdaten",
+    "editBtn": "Bearbeiten",
+    "deleteBtn": "Löschen",
+    "backBtn": "Zurück zur Seite",
+    "formFields": [
+      "Kontakte",
+      "Lade-/Endladestellen",
+      "Material",
+      "Preis",
+      "Gültig bis",
+      "Gültig bis"
+    ],
+    "locations": {
+      "title": "Lade-/Endladestellen"
+    }
+  },
+  "PRICEADDEDITTPAGE": {
+    "title": "Preise",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "formFields": ["Name", "Kontakte", "Lade-/Endladestellen"],
+    "formFieldsMaterial": {
+      "headers": ["Material", "Preise"],
+      "formFields": [
+        "Material",
+        "New Material",
+        "Gültig bis",
+        "Gültig bis",
+        "Price per unit",
+        "Maßeinheit"
+      ],
+      "buttons": ["Neue Hinzufügen", " Zurück ", " Bestätigen ", "Nwu Material"]
+    },
+    "action": {
+      "back": {
+        "title": "Zurück"
+      },
+      "confirm": {
+        "title": "Bestätigen"
+      }
+    }
+  },
+  "PRICEFILTERPAGE": {
+    "title": "Ansicht Anpassen"
+  },
+  "VEHICLESPAGE": {
+    "title": "Fahrzeuge",
+    "search_placeholder": "Suche",
+    "filterPlaceholder": [
+      {
+        "title": "Alles zeigen",
+        "value": "all"
+      },
+      {
+        "title": "Anpassen",
+        "value": "custom"
+      }
+    ],
+    "newButton": "Neu",
+    "tableSetting": []
+  },
+  "VEHICLESVIEWPAGE": {
+    "title": "Fahrzeuge",
+    "info": "Stammdaten",
+    "editBtn": "Bearbeiten",
+    "deleteBtn": "Löschen",
+    "backBtn": "Zurück zur Seite",
+    "formFields": [
+      "Fahrzeug",
+      "Kategorie",
+      "Materialgruppe",
+      "Amtliches Kennzeichen"
+    ],
+    "subTable": {
+      "title": ""
+    }
+  },
+  "VEHICLESADDEDITTPAGE": {
+    "title": "Fahrzeug",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "formFields": [
+      {
+        "title": "Fahrzeugname",
+        "error": "Fahrzeugname ist erforderlich."
+      },
+      {
+        "title": "Bestehende Fahrzeugkategorie",
+        "error": "Fahrzeugkategorie ist erforderlich.",
+        "label": "Fahrzeugkategorie hinzufügen"
+      },
+      {
+        "title": "Neue Fahrzeugkategorie",
+        "label": "Fahrzeugkategorie hinzufügen"
+      },
+      {
+        "title": "Nummernschild",
+        "error": "Nummernschild ist erforderlich."
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Zurück"
+      },
+      "confirm": {
+        "title": "Bestätigen"
+      }
+    }
+  },
+  "VEHICLESFILTERPAGE": {
+    "title": "Ansicht Anpassen"
+  },
+  "TRAILERSPAGE": {
+    "title": "Auflieger",
+    "search_placeholder": "Suche",
+    "filterPlaceholder": [
+      {
+        "title": "Alles zeigen",
+        "value": "all"
+      },
+      {
+        "title": "Anpassen",
+        "value": "custom"
+      }
+    ],
+    "newButton": "Neu",
+    "tableSetting": []
+  },
+  "TRAILERSVIEWPAGE": {
+    "title": "Auflieger",
+    "info": "Stammdaten",
+    "editBtn": "Bearbeiten",
+    "deleteBtn": "Löschen",
+    "backBtn": "Zurück zur Seite",
+    "formFields": ["Fahrzeug", "Kategorie", "Nummernschild"],
+    "subTable": {
+      "title": ""
+    }
+  },
+  "TRAILERSADDEDITTPAGE": {
+    "title": "Auflieger",
+    "add": "Hinzufügen",
+    "edit": "Edit",
+    "formFields": [
+      {
+        "title": "Auflieger",
+        "error": "Aufliegername ist erforderlich."
+      },
+      {
+        "title": "Bestehende Auflieger-Kategorie",
+        "error": "Auflieger-Kategorie ist erforderlich.",
+        "label": "Auflieger-Kategorie hinzufügen"
+      },
+      {
+        "title": "Neue Auflieger-Kategorie",
+        "label": "Auflieger-Kategorie hinzufügen"
+      },
+      {
+        "title": "Nummernschild",
+        "error": "Nummernschild ist erforderlich."
+      }
+    ]
+  },
+  "TRAILERSFILTERPAGE": {
+    "title": "Ansicht Anpassen"
+  },
+  "days": [
+    {
+      "title": "Montag",
+      "value": 1
+    },
+    {
+      "title": "Dienstag",
+      "value": 2
+    },
+    {
+      "title": "Mittwoch",
+      "value": 3
+    },
+    {
+      "title": "Donnerstag",
+      "value": 4
+    },
+    {
+      "title": "Freitag",
+      "value": 5
+    },
+    {
+      "title": "Samstag",
+      "value": 6
+    },
+    {
+      "title": "Sonntag",
+      "value": 7
+    }
+  ],
+  "locationType": [
+    {
+      "title": "Beide",
+      "value": ["Ladestellen", "Endladestellen"],
+      "keyCode": 3
+    },
+    {
+      "title": "Ladestellen",
+      "value": ["Ladestellen"],
+      "keyCode": 1
+    },
+    {
+      "title": "Endladestellen",
+      "value": ["Endladestellen"],
+      "keyCode": 2
+    }
+  ]
+}

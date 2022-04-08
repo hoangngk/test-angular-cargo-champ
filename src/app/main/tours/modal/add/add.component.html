@@ -1,0 +1,228 @@
+<nb-card class="full">
+    <nb-card-header>{{data ?( 'TOURSADDEDITTPAGE.edit' | translate) : ('TOURSADDEDITTPAGE.add' | translate) }} {{
+        'TOURSADDEDITTPAGE.title' | translate}}</nb-card-header>
+    <nb-card-body>
+
+        <form [formGroup]="contactForm" (ngSubmit)="saveContactDetails()">
+            <!-- <div class="form-group">
+                <input type="text" nbInput fullWidth placeholder="Tour Name" formControlName="name">
+                <ng-container *ngIf="submitted || ( f.name.invalid && f.name.touched )">
+                    <p class="caption status-danger" *ngIf="f.name.errors?.required">
+                        Tour Name is required!
+                    </p>
+                </ng-container>
+            </div> -->
+
+
+            <!-- <div class="form-group">
+                <input type="text" nbInput fullWidth placeholder="Loading Location" formControlName="loadingLocation">
+            </div> -->
+            <div class="form-group ex-ic">
+                <input #autoInputOrders fullWidth nbInput type="text" (input)="onChangeOrders()" formControlName="order"
+                    [placeholder]="('TOURSADDEDITTPAGE.formFields' | translate)[7].title"
+                    [nbAutocomplete]="autoOrders" />
+
+                <nb-autocomplete #autoOrders (selectedChange)="onSelectionChangeOrders($event)">
+                    <nb-option *ngFor="let option of filteredOptionsOrders$ | async" [value]="option.note">
+                        {{ option.note }}
+                    </nb-option>
+                </nb-autocomplete>
+                <nb-icon class="ex-icon" icon="chevron-down-outline" [class.open]="openOrder"></nb-icon>
+            </div>
+
+            <div class="form-group ex-ic">
+
+
+                <input #autoInputLoadingLocation fullWidth nbInput type="text" (input)="onChangeLoadingLocation()"
+                    formControlName="loadingLocation"
+                    [placeholder]="('TOURSADDEDITTPAGE.formFields' | translate)[0].title"
+                    [nbAutocomplete]="autoLoadingLocation" />
+
+                <nb-autocomplete #autoLoadingLocation (selectedChange)="onSelectionChangeLoadingLocation($event)">
+                    <nb-option *ngFor="let option of filteredOptionsLoadingLocation$ | async" [value]="option.name">
+                        {{ option.name }}
+                    </nb-option>
+                </nb-autocomplete>
+
+                <nb-icon class="ex-icon" icon="chevron-down-outline" [class.open]="openOrder"></nb-icon>
+
+                <ng-container *ngIf="submitted || ( f.loadingLocation.invalid && f.loadingLocation.touched )">
+                    <p class="caption status-danger" *ngIf="f.loadingLocation.errors?.required">
+                        {{('TOURSADDEDITTPAGE.formFields' | translate)[0].error}}
+                    </p>
+                </ng-container>
+
+
+            </div>
+            <div class="form-group ex-ic">
+
+
+                <input #autoInputUnLoadingLocation fullWidth nbInput type="text" (input)="onChangeUnLoadingLocation()"
+                    formControlName="unloadingLocation"
+                    [placeholder]="('TOURSADDEDITTPAGE.formFields' | translate)[1].title"
+                    [nbAutocomplete]="autoUnLoadingLocation" />
+
+                <nb-autocomplete #autoUnLoadingLocation (selectedChange)="onSelectionChangeUnLoadingLocation($event)">
+                    <nb-option *ngFor="let option of filteredOptionsUnLoadingLocation$ | async" [value]="option.name">
+                        {{ option.name }}
+                    </nb-option>
+                </nb-autocomplete>
+
+                <nb-icon class="ex-icon" icon="chevron-down-outline" [class.open]="openOrder"></nb-icon>
+
+                <ng-container *ngIf="submitted || ( f.unloadingLocation.invalid && f.unloadingLocation.touched )">
+                    <p class="caption status-danger" *ngIf="f.unloadingLocation.errors?.required">
+                        {{('TOURSADDEDITTPAGE.formFields' | translate)[1].error}}
+                    </p>
+                </ng-container>
+            </div>
+            <div class="form-group">
+                <nb-select fullWidth style="min-width:250px" class="options" formControlName="type"
+                    placeholder="{{ ('TOURSADDEDITTPAGE.formFields' | translate)[8].title }}">
+                    <nb-option disabled> {{ ('TOURSADDEDITTPAGE.formFields' | translate)[8].title }}</nb-option>
+                    <nb-option *ngFor="let c of toursType" [value]="c.const"> {{ c.description }}</nb-option>
+                </nb-select>
+            </div>
+
+            <div class="form-group">
+                <nb-select fullWidth style="min-width:250px" class="options" formControlName="status"
+                    placeholder="{{ ('TOURSADDEDITTPAGE.formFields' | translate)[9].title }}">
+                    <nb-option disabled> {{ ('TOURSADDEDITTPAGE.formFields' | translate)[9].title }}</nb-option>
+                    <nb-option *ngFor="let c of toursStatus" [value]="c.const"> {{ c.description }}</nb-option>
+                </nb-select>
+            </div>
+
+            <div class="form-group ex-ic">
+
+                <input #autoInputMaterial fullWidth nbInput type="text" (input)="onChangeMaterial()"
+                    formControlName="material" [placeholder]="('TOURSADDEDITTPAGE.formFields' | translate)[3].title"
+                    [nbAutocomplete]="autoMaterial" />
+
+                <nb-autocomplete #autoMaterial (selectedChange)="onSelectionChangeMaterial($event)">
+                    <nb-option *ngFor="let option of filteredOptionsMaterial$ | async" [value]="option.name">
+                        {{ option.name }}
+                    </nb-option>
+                </nb-autocomplete>
+
+                <nb-icon class="ex-icon" icon="chevron-down-outline" [class.open]="openOrder"></nb-icon>
+
+                <ng-container *ngIf="submitted || ( f.material.invalid && f.material.touched )">
+                    <p class="caption status-danger" *ngIf="f.material.errors?.required">
+                        {{('TOURSADDEDITTPAGE.formFields' | translate)[3].error}}
+                    </p>
+                </ng-container>
+            </div>
+
+            <div class="form-group inline-form">
+                <div class="half">
+                    <input type="text" nbInput
+                        placeholder="{{ ('TOURSADDEDITTPAGE.formFields' | translate)[10].title }}"
+                        formControlName="amount">
+                </div>
+
+                <div class="half">
+                    <label for="">{{('TOURSADDEDITTPAGE.formFields' | translate)[11].title}}</label>
+                    <nb-select selected="m3" formControlName="conversionTonneCubicMeter">
+                        <nb-option value="t">t</nb-option>
+                        <nb-option value="m³">m³</nb-option>
+                        <nb-option value="charge">charge</nb-option>
+                    </nb-select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input nbInput fullWidth placeholder="{{ ('TOURSADDEDITTPAGE.formFields' | translate)[12].title }}"
+                    [nbDatepicker]="dateTimeexecutionDate" formControlName="executionDate">
+                <nb-datepicker #dateTimeexecutionDate></nb-datepicker>
+
+            </div>
+
+            <div class="form-group">
+                <input nbInput fullWidth placeholder="{{ ('TOURSADDEDITTPAGE.formFields' | translate)[13].title }}"
+                    [nbDatepicker]="dateTimedeadlineDate" formControlName="deadlineDate">
+                <nb-datepicker #dateTimedeadlineDate></nb-datepicker>
+
+            </div>
+
+            <div class="form-group">
+
+                <nb-select fullWidth class="options" formControlName="trailerCategory"
+                    [placeholder]="('TOURSADDEDITTPAGE.formFields' | translate)[6].title">
+                    <nb-option *ngFor="let c of trailerCategory" [value]="c.const"> {{ c.description }}
+                    </nb-option>
+                </nb-select>
+            </div>
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    placeholder="{{ ('TOURSADDEDITTPAGE.formFields' | translate)[14].title }}" formControlName="driver">
+            </div>
+
+            <div class="form-group">
+                <textarea type="text" nbInput fullWidth
+                    placeholder="{{ ('TOURSADDEDITTPAGE.formFields' | translate)[16].title }}"
+                    formControlName="comments">
+                    </textarea>
+
+            </div>
+
+            <nb-accordion>
+                <nb-accordion-item>
+                    <nb-accordion-item-header>
+                        {{('TOURSADDEDITTPAGE.formFields' | translate)[15].mainTitle}}
+                    </nb-accordion-item-header>
+                    <nb-accordion-item-body>
+                        <a class="add_button" nbButton status="primary" size="small" (click)="addTripsItem()"
+                            style="cursor: pointer;">
+                            {{('TOURSADDEDITTPAGE.formFields' | translate)[15].button}}
+                        </a>
+                        <div *ngFor="let trip of _getfTrips.controls; let i = index" style="margin-top: 10px;">
+                            <div class="opentime" [formGroup]="trip">
+                                <div class="trip-name">
+                                    {{('TOURSADDEDITTPAGE.formFields' | translate)[15].fields[0] }} {{ i + 1}}
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" nbInput fullWidth
+                                        [placeholder]="('TOURSADDEDITTPAGE.formFields' | translate)[15].fields[1]"
+                                        formControlName="amount">
+                                </div>
+
+                                <div class="form-group">
+                                    <nb-select class="options" formControlName="status" style="min-width:220px"
+                                        [placeholder]="('TOURSADDEDITTPAGE.formFields' | translate)[15].fields[2]">
+                                        <nb-option *ngFor="let c of toursStatus" [value]="c.const"> {{ c.description }}
+                                        </nb-option>
+                                    </nb-select>
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea type="text" nbInput
+                                        placeholder="{{ ('TOURSADDEDITTPAGE.formFields' | translate)[15].fields[3] }}"
+                                        formControlName="comments" style="height: 35px;">
+                                        </textarea>
+
+                                </div>
+                            </div>
+                        </div>
+                    </nb-accordion-item-body>
+                </nb-accordion-item>
+            </nb-accordion>
+
+        </form>
+    </nb-card-body>
+
+    <nb-card-footer>
+
+        <div class="action">
+            <button nbButton (click)="dismiss()">
+                {{('TOURSADDEDITTPAGE.action.back.title' | translate)}}
+            </button>
+
+            <button nbButton status="primary" (click)="saveContactDetails()">
+                {{('TOURSADDEDITTPAGE.action.confirm.title' | translate)}}
+            </button>
+        </div>
+    </nb-card-footer>
+
+</nb-card>

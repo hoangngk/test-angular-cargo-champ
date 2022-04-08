@@ -1,0 +1,39 @@
+label{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #252C32;
+    margin-right: 10px;
+}
+
+.add-location{
+    margin-left: 10px;
+    text-transform: unset!important;
+}
+
+.opentime{
+    display: flex;
+    justify-content: space-between;
+}
+.add_button{
+    margin-left: 0!important;
+}
+::ng-deep .nb-theme-custom-theme nb-accordion-item:last-child.collapsed nb-accordion-item-header{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #252C32;
+    margin-right: 10px;
+}
+
+::ng-deep .nb-theme-custom-theme nb-accordion{
+    box-shadow: none;
+    border: 1px solid #ACAEAE;
+    margin-bottom: 10px;
+}

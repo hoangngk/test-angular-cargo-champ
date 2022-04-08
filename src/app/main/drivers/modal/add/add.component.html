@@ -1,0 +1,444 @@
+<nb-card class="full">
+  <nb-card-header
+    >{{
+      data
+        ? ("DRIVERSADDEDITTPAGE.edit" | translate)
+        : ("DRIVERSADDEDITTPAGE.add" | translate)
+    }}
+    {{ "DRIVERSADDEDITTPAGE.title" | translate }}
+  </nb-card-header>
+  <nb-card-body>
+    <!-- {{orderForm.value | json }} -->
+    <form [formGroup]="orderForm" (ngSubmit)="saveMaterialDetails()">
+      <div class="form-box contact-details">
+        <div class="main-form-title">
+          {{ ("DRIVERSADDEDITTPAGE.formHeaderTitles" | translate)[0] }}
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[0]
+            }}"
+            formControlName="note"
+          />
+          <!-- <ng-container *ngIf="submitted || ( f.name.invalid && f.name.touched )">
+                    <p class="caption status-danger" *ngIf="f.name.errors?.required">
+                        Name is required!
+                    </p>
+                </ng-container> -->
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[1]
+            }}"
+            formControlName="billedToContact"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[2]
+            }}"
+            formControlName="note"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[3]
+            }}"
+            formControlName="note"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[4]
+            }}"
+            formControlName="billedToContact"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[5]
+            }}"
+            formControlName="note"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[6]
+            }}"
+            formControlName="note"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[7]
+            }}"
+            formControlName="billedToContact"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[8]
+            }}"
+            formControlName="note"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[9]
+            }}"
+            [nbDatepicker]="dateTimeValisUntill"
+            formControlName="offerDate"
+          />
+          <nb-datepicker #dateTimeValisUntill></nb-datepicker>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFields' | translate)[10]
+            }}"
+            formControlName="note"
+          />
+        </div>
+      </div>
+
+      <div class="form-box driver-licence">
+        <div class="main-form-title">
+          {{ ("DRIVERSADDEDITTPAGE.formHeaderTitles" | translate)[1] }}
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFieldDriverLicence' | translate)[0]
+            }}"
+            formControlName="note"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFieldDriverLicence' | translate)[1]
+            }}"
+            formControlName="note"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 p-0">{{
+            ("DRIVERSADDEDITTPAGE.formFieldDriverLicence" | translate)[2]
+          }}</label>
+          <input
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFieldDriverLicence' | translate)[4]
+            }}"
+            [nbDatepicker]="dateTimeValisUntill"
+            formControlName="offerDate"
+            class="col-sm-8 float-right"
+          />
+          <nb-datepicker #dateTimeValisUntill></nb-datepicker>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 p-0">{{
+            ("DRIVERSADDEDITTPAGE.formFieldDriverLicence" | translate)[3]
+          }}</label>
+          <input
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFieldDriverLicence' | translate)[4]
+            }}"
+            [nbDatepicker]="dateTimeValisUntill"
+            formControlName="offerDate"
+            class="col-sm-8 float-right"
+          />
+          <nb-datepicker #dateTimeValisUntill></nb-datepicker>
+        </div>
+      </div>
+
+      <div class="form-box scorecard">
+        <div class="main-form-title">
+          {{ ("DRIVERSADDEDITTPAGE.formHeaderTitles" | translate)[2] }}
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFieldDriverScorecard' | translate)[0]
+            }}"
+            formControlName="note"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 p-0">
+            {{
+              ("DRIVERSADDEDITTPAGE.formFieldDriverScorecard" | translate)[1]
+            }}
+          </label>
+          <div class="col-sm-8 p-0">
+            <button nbButton status="primary">
+              <nb-icon icon="plus"></nb-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFieldDriverScorecard' | translate)[2]
+            }}"
+            [nbDatepicker]="dateTimeValisUntill"
+            formControlName="offerDate"
+          />
+          <nb-datepicker #dateTimeValisUntill></nb-datepicker>
+        </div>
+      </div>
+
+      <div class="form-box vacation-details">
+        <div class="main-form-title">
+          {{ ("DRIVERSADDEDITTPAGE.formHeaderTitles" | translate)[3] }}
+        </div>
+        <div class="form-group">
+          <input
+            class="col-sm-6"
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFieldVacationDetails' | translate)[0]
+            }}"
+            formControlName="note"
+          />
+          <label class="col-md-5">{{
+            ("DRIVERSADDEDITTPAGE.formFieldVacationDetails" | translate)[2]
+          }}</label>
+        </div>
+
+        <div class="form-group">
+          <input
+            class="col-md-6"
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="{{
+              ('DRIVERSADDEDITTPAGE.formFieldVacationDetails' | translate)[1]
+            }}"
+            formControlName="note"
+          />
+          <label class="col-md-5">{{
+            ("DRIVERSADDEDITTPAGE.formFieldVacationDetails" | translate)[2]
+          }}</label>
+        </div>
+      </div>
+
+      <div class="form-box wage-type">
+        <div class="main-form-title">
+          {{ ("DRIVERSADDEDITTPAGE.formHeaderTitles" | translate)[4] }}
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-3 v-hidden">
+            <label for="">
+              {{ ("DRIVERSADDEDITTPAGE.wageType" | translate)[0].label }}
+            </label>
+          </div>
+          <div class="col-sm-9">
+            <nb-radio-group class="row">
+              <nb-radio
+                *ngFor="let w of wageType"
+                class="col-sm-4"
+                [value]="w.value"
+              >
+                {{ w.label }}
+              </nb-radio>
+            </nb-radio-group>
+          </div>
+        </div>
+      </div>
+      <div class="form-box">
+        <div class="main-form-title">
+          {{ ("DRIVERSADDEDITTPAGE.formHeaderTitles" | translate)[5] }}
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-3 ">
+            <label for="">
+              {{ ("DRIVERSADDEDITTPAGE.bodyType" | translate)[0].label }}
+            </label>
+          </div>
+          <div class="col-sm-9">
+            <div class="validation-checkboxes row">
+              <nb-checkbox class="col-sm-4" color="primary" *ngFor="let w of bodyType"
+                >{{w.label}}</nb-checkbox
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-3">
+            <label for="">
+              {{ ("DRIVERSADDEDITTPAGE.goodsType" | translate)[0].label }}
+            </label>
+          </div>
+          <div class="col-sm-9">
+            <div class="validation-checkboxes row">
+                <nb-checkbox class="col-sm-4" color="primary" *ngFor="let w of goodsType"
+                >{{w.label}}</nb-checkbox
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-3">
+            <label for="">
+              {{ ("DRIVERSADDEDITTPAGE.skillType" | translate)[0].label }}
+            </label>
+          </div>
+          <div class="col-sm-9">
+            <div class="validation-checkboxes row">
+                <nb-checkbox class="col-sm-4" color="primary" *ngFor="let w of skillType"
+                >{{w.label}}</nb-checkbox
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-3">
+            <label for="">
+              {{ ("DRIVERSADDEDITTPAGE.lorryType" | translate)[0].label }}
+            </label>
+          </div>
+          <div class="col-sm-9">
+            <div class="validation-checkboxes row">
+                <nb-checkbox [class]="i === 1 ? 'col-sm-5' :  'col-sm-4'" color="primary" *ngFor="let w of lorryType;let i =index"
+                >{{w.label}}</nb-checkbox
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="main-form-title">
+          {{ ("DRIVERSADDEDITTPAGE.formHeaderTitles" | translate)[6] }}
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-3 v-hidden">
+            <label for="">
+              {{ ("DRIVERSADDEDITTPAGE.frequencyType" | translate)[0].label }}
+            </label>
+          </div>
+          <div class="col-sm-9">
+            <nb-radio-group class="row">
+                <nb-radio
+                *ngFor="let w of frequencyType"
+                class="col-sm-4"
+                [value]="w.value"
+              >
+                {{ w.label }}
+              </nb-radio>
+            </nb-radio-group>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="main-form-title ">
+          {{ ("DRIVERSADDEDITTPAGE.formHeaderTitles" | translate)[7] }}
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-3 v-hidden">
+            <label for="">
+              {{ ("DRIVERSADDEDITTPAGE.equipmentIn" | translate)[0].label }}
+            </label>
+          </div>
+          <div class="col-sm-9">
+            <div class="validation-checkboxes row">
+                <nb-checkbox class="col-sm-4" color="primary" *ngFor="let w of equipmentIn"
+                >{{w.label}}</nb-checkbox
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </nb-card-body>
+
+  <nb-card-footer>
+    <div class="action">
+      <button nbButton (click)="dismiss()">
+        {{ "DRIVERSADDEDITTPAGE.action.back.title" | translate }}
+      </button>
+
+      <button nbButton status="primary" (click)="saveMaterialDetails()">
+        {{ "DRIVERSADDEDITTPAGE.action.confirm.title" | translate }}
+      </button>
+    </div>
+  </nb-card-footer>
+</nb-card>

@@ -1,0 +1,107 @@
+<nb-card class="full">
+    <nb-card-header>{{data ?( 'MATERIALADDEDITTPAGE.edit' | translate) : ('MATERIALADDEDITTPAGE.add' | translate) }} {{
+        'MATERIALADDEDITTPAGE.title' | translate}}
+    </nb-card-header>
+    <nb-card-body>
+        <!-- {{materialForm.value | json}} -->
+        <form [formGroup]="materialForm" (ngSubmit)="saveMaterialDetails()">
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    placeholder="{{ ('MATERIALADDEDITTPAGE.formFields' | translate)[0].title }}" formControlName="name">
+                <ng-container *ngIf="submitted || ( f.name.invalid && f.name.touched )">
+                    <p class="caption status-danger" *ngIf="f.name.errors?.required">
+                        {{ ('MATERIALADDEDITTPAGE.formFields' | translate)[0].error }}
+                    </p>
+                </ng-container>
+            </div>
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    placeholder="{{ ('MATERIALADDEDITTPAGE.formFields' | translate)[1].title }}"
+                    formControlName="articleNumber">
+
+            </div>
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    placeholder="{{ ('MATERIALADDEDITTPAGE.formFields' | translate)[2].title }}"
+                    formControlName="materialGroup">
+
+            </div>
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    placeholder="{{ ('MATERIALADDEDITTPAGE.formFields' | translate)[3].title }}"
+                    formControlName="description">
+
+            </div>
+
+            <div class="form-group inline-form">
+                <div class="half">
+                    <input type="text" nbInput
+                        placeholder="{{ ('MATERIALADDEDITTPAGE.formFields' | translate)[4].title }}"
+                        formControlName="granulation">
+                </div>
+
+                <div class="half">
+                    <label for="">{{('MATERIALADDEDITTPAGE.formFields' | translate)[5].title}}</label>
+                    <nb-select selected="m3" formControlName="conversionTonneCubicMeter">
+                        <nb-option value="t">t</nb-option>
+                        <nb-option value="m³">m³</nb-option>
+                        <nb-option value="charge">charge</nb-option>
+                    </nb-select>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <!-- <label for="">{{('MATERIALADDEDITTPAGE.formFields' | translate)[6].title}}</label> -->
+                <input type="text" nbInput placeholder="{{ ('MATERIALADDEDITTPAGE.formFields' | translate)[6].title }}"
+                    formControlName="density">
+            </div>
+
+
+
+
+            <div class="form-group">
+                <div class="custom-add">
+                    <div>
+                        <label for="">{{('MATERIALADDEDITTPAGE.formFields' | translate)[8].label}}</label> <br>
+                        <nb-select multiple style="min-width:250px" class="options" formControlName="location"
+                            [placeholder]="('MATERIALADDEDITTPAGE.formFields' | translate)[8].title">
+                            <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option.name">
+                                {{ option.name }}
+                            </nb-option>
+                        </nb-select>
+                    </div>
+
+                    <div class="add-form ">
+                        <form [formGroup]="locationForm" (ngSubmit)="submitForm()">
+                            <input type="text" nbInput formControlName="name"
+                                [placeholder]="('MATERIALADDEDITTPAGE.formFields' | translate)[9].title">
+
+                            <button type="submit" nbButton status="primary">
+                                {{('MATERIALADDEDITTPAGE.formFields' | translate)[9].label}}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </nb-card-body>
+
+    <nb-card-footer>
+
+        <div class="action">
+            <button nbButton (click)="dismiss()">
+                {{('MATERIALADDEDITTPAGE.action.back.title' | translate)}}
+            </button>
+
+            <button nbButton status="primary" (click)="saveMaterialDetails()">
+                {{('MATERIALADDEDITTPAGE.action.confirm.title' | translate)}}
+            </button>
+        </div>
+    </nb-card-footer>
+
+</nb-card>

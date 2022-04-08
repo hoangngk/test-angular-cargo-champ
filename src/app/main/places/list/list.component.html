@@ -1,0 +1,41 @@
+<div class="page">
+    <div class="main-title">
+        {{ 'LOCATIONSPAGE.title' | translate }}
+    </div>
+    <nb-card>
+        <nb-tabset>
+            <nb-tab [tabTitle]="('LOCATIONSPAGE.tab' | translate)[0].title">
+                <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+
+                <ng2-smart-table [ngClass]="hideCols" [settings]="settings" [source]="sourceLoading" (deleteConfirm)="onDeleteConfirm($event)"
+                    (userRowSelect)="onRowSelected($event)">
+                </ng2-smart-table>
+            </nb-tab>
+            <nb-tab [tabTitle]="('LOCATIONSPAGE.tab' | translate)[1].title">
+                <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+                <ng2-smart-table  [ngClass]="hideCols" [settings]="settings" [source]="sourceUnLoading" (deleteConfirm)="onDeleteConfirm($event)"
+                    (userRowSelect)="onRowSelected($event)">
+                </ng2-smart-table>
+            </nb-tab>
+
+            <nb-tab [tabTitle]="('LOCATIONSPAGE.tab' | translate)[2].title" >
+                <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+                <ng2-smart-table  [ngClass]="hideCols" [settings]="settings" [source]="sourcebothAdded" (deleteConfirm)="onDeleteConfirm($event)"
+                    (userRowSelect)="onRowSelected($event)">
+                </ng2-smart-table>
+            </nb-tab>
+
+            <div class="flag-unassigned">
+                3
+            </div>
+            <nb-tab [tabTitle]="('LOCATIONSPAGE.tab' | translate)[3].title" [badgeText]="listUnassigned.length" [badgeStatus]="'danger'">
+                
+                <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+                <ng2-smart-table  [ngClass]="hideCols" [settings]="settings" [source]="sourceUnassigned" (deleteConfirm)="onDeleteConfirm($event)"
+                    (userRowSelect)="onRowSelected($event)">
+                </ng2-smart-table>
+            </nb-tab>
+
+        </nb-tabset>
+    </nb-card>
+</div>

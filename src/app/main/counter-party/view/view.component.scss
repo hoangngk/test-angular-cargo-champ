@@ -1,0 +1,51 @@
+.p-none{
+    padding: 0;
+}
+
+// table-search
+.search-filter{
+    width: 100%;
+    height: 48px;
+    border: 1px solid #f7f9fc;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    padding: 6px 10px;
+}
+.search{
+    max-width: 250px;
+    border: 1px solid #f7f9fc!important;
+    box-sizing: border-box;
+    border-radius: 6px;
+    svg{
+        margin-left: 5px;
+    }
+    input{
+        line-height: 30px;
+        background-color: unset!important;
+        border-color: unset!important;
+        border: none;
+    }
+}
+
+.no-anch{
+    text-decoration: none!important;
+    cursor: pointer;
+}
+
+p.week{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 3px;
+}
+
+.form-control{
+    margin-top: 12px;
+}
+
+::ng-deep .tree-grid nb-sort-icon{
+    float: right;
+}

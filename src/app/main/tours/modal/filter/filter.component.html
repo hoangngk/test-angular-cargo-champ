@@ -1,0 +1,32 @@
+<nb-card class="full">
+    <nb-card-header>Filter</nb-card-header>
+    <nb-card-body>
+        <form>
+            <div class="form-group">
+                <input type="text" nbInput fullWidth placeholder="Name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth placeholder="Contact">
+            </div>
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth placeholder="Location">
+            </div>
+        </form>
+    </nb-card-body>
+
+    <nb-card-footer>
+
+        <div class="action">
+            <button nbButton (click)="dismiss()">
+                Back
+            </button>
+
+            <button nbButton status="primary">
+                Apply Filter
+            </button>
+        </div>
+    </nb-card-footer>
+
+</nb-card>

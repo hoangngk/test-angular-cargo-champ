@@ -1,0 +1,65 @@
+<nb-card class="full">
+    <nb-card-header>{{data ?( 'VEHICLESADDEDITTPAGE.edit' | translate) : ('VEHICLESADDEDITTPAGE.add' | translate) }} {{
+        'VEHICLESADDEDITTPAGE.title' | translate}}
+    </nb-card-header>
+    <nb-card-body>
+        <!-- {{vehiclesForm.value | json}} -->
+        <form [formGroup]="vehiclesForm" (ngSubmit)="saveMaterialDetails()">
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    placeholder="{{ ('VEHICLESADDEDITTPAGE.formFields' | translate)[0].title }}" formControlName="name">
+                <ng-container *ngIf="submitted || ( f.name.invalid && f.name.touched )">
+                    <p class="caption status-danger" *ngIf="f.name.errors?.required">
+                        {{ ('VEHICLESADDEDITTPAGE.formFields' | translate)[0].error }}
+                    </p>
+                </ng-container>
+            </div>
+
+            <div class="form-group">
+                <div class="custom-add">
+                    <div>
+                        <label for="">{{('VEHICLESADDEDITTPAGE.formFields' | translate)[1].label}}</label> <br>
+                        <nb-select multiple style="min-width:250px" class="options" formControlName="location"
+                            [placeholder]="('VEHICLESADDEDITTPAGE.formFields' | translate)[1].title">
+                            <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option.name">
+                                {{ option.name }}
+                            </nb-option>
+                        </nb-select>
+                    </div>
+
+                    <div class="add-form ">
+                        <form [formGroup]="locationForm" (ngSubmit)="submitForm()">
+                            <input type="text" nbInput formControlName="name"
+                                [placeholder]="('VEHICLESADDEDITTPAGE.formFields' | translate)[2].title">
+
+                            <button type="submit" nbButton status="primary">
+                                {{('VEHICLESADDEDITTPAGE.formFields' | translate)[2].label}}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    placeholder="{{ ('VEHICLESADDEDITTPAGE.formFields' | translate)[3].title }}"
+                    formControlName="traits">
+
+            </div>
+
+        </form>
+    </nb-card-body>
+
+    <nb-card-footer>
+
+        <div class="action">
+            <button nbButton (click)="dismiss()">
+                {{('VEHICLESADDEDITTPAGE.action.back.title' | translate)}}
+            </button>
+
+            <button nbButton status="primary" (click)="saveMaterialDetails()">
+                {{('VEHICLESADDEDITTPAGE.action.confirm.title' | translate)}}
+            </button>
+        </div>
+    </nb-card-footer>
+</nb-card>

@@ -1,0 +1,31 @@
+
+<div *ngIf="rowData.typePage === 1">
+    <a [routerLink]="['../../main/materials/view',rowData.id]" class="no-anch">
+        {{value}}
+    </a>
+</div>
+
+<div *ngIf="rowData.typePage === 2">
+    <a [routerLink]="['../../main/counter-party/view',rowData.id]" class="no-anch">
+        {{value}}
+    </a>
+</div>
+
+<div *ngIf="rowData.typePage === 3">
+    <a [routerLink]="['../../main/locations/view',rowData.id]" class="no-anch">
+        {{value}}
+    </a>
+</div>
+
+<div *ngIf="rowData.typePage === 4">
+    <a [routerLink]="['../../main/vehicles/view',rowData.id]" class="no-anch">
+        {{value}}
+    </a>
+</div>
+
+<div *ngIf="rowData.typePage === 5">
+    <a [routerLink]="['../../main/trailers/view',rowData.id]" class="no-anch">
+        {{value}}
+    </a>
+</div>
+

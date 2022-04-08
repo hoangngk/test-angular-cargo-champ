@@ -1,0 +1,30 @@
+label{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #252C32;
+    margin-right: 10px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    div {
+        width: 48%;
+    }
+}
+.add_button {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.mat_save {
+    .action button {
+        &:last-child {
+            margin-left: 12px;
+        }
+    }
+}

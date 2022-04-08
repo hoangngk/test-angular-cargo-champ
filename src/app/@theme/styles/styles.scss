@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+// themes - our custom or/and out of the box themes
+@import 'themes';
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/globals';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/grid';
+
+// loading progress bar theme
+@import './pace.theme';
+
+@import './layout';
+@import './overrides';
+
+// install the framework and custom global styles
+@include nb-install() {
+
+  // framework global styles
+  @include nb-theme-global();
+  @include nb-auth-global();
+
+  @include ngx-layout();
+  // loading progress bar
+  @include ngx-pace-theme();
+
+  @include nb-overrides();
+};
+
+
+.nb-theme-custom-theme a:hover {
+  color: #0E73F6!important;
+}
+
+.nb-theme-custom-theme [nbButton].appearance-filled.status-danger, .nb-theme-custom-theme .appearance-filled.status-danger[nbButtonToggle] {
+  background-color: #CF0000;
+  border-color: #CF0000;
+  color: #ffffff;
+  &:hover{
+    background-color: #e46f6f;
+    border-color: #e46f6f;
+  }
+}
+
+.nb-theme-custom-theme [nbButton].appearance-filled.status-basic, .nb-theme-custom-theme .appearance-filled.status-basic[nbButtonToggle]{
+  background: rgba(184, 184, 184, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-left: 25px;
+}
+
+.nb-theme-custom-theme nb-menu .menu-item{
+  border: none;
+}
+// menu border add
+.menu-items li { 
+  &:nth-child(1){
+    border-bottom: 1px solid #edf1f7;
+  }
+  &:nth-child(4){
+    border-bottom: 1px solid #edf1f7;
+  }
+  &:nth-child(7){
+    border-bottom: 1px solid #edf1f7;
+  }
+  &:nth-child(10){
+    border-bottom: 1px solid #edf1f7;
+  }
+}
+

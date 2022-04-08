@@ -1,0 +1,15 @@
+<div class="page">
+  <div class="main-title">
+    {{ 'PRICEPAGE.title' | translate }}
+  </div>
+  <nb-card>
+    <!-- <nb-card-body> -->
+    <nb-card-header>
+      <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+
+    </nb-card-header>
+    <ng2-smart-table  [ngClass]="hideCols" [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+    <!-- </nb-card-body> -->
+  </nb-card>
+</div>

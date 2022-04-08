@@ -1,0 +1,36 @@
+<div class="page">
+  <div class="main-title">
+    {{ 'CONTACTPAGE.title' | translate }}
+
+  </div>
+  <nb-card>
+    <nb-tabset>
+      <nb-tab [tabTitle]="('CONTACTPAGE.tab' | translate)[0].title">
+        <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+        <ng2-smart-table [ngClass]="hideCols" [settings]="settings" [source]="sourceSUPPLIER"
+          (deleteConfirm)="onDeleteConfirm($event)" (userRowSelect)="onRowSelected($event)">
+        </ng2-smart-table>
+      </nb-tab>
+      <nb-tab [tabTitle]="('CONTACTPAGE.tab' | translate)[1].title">
+        <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+        <ng2-smart-table [ngClass]="hideCols" [settings]="settings" [source]="sourceCONSUMER"
+          (deleteConfirm)="onDeleteConfirm($event)" (userRowSelect)="onRowSelected($event)">
+        </ng2-smart-table>
+      </nb-tab>
+      <nb-tab [tabTitle]="('CONTACTPAGE.tab' | translate)[2].title">
+        <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+        <ng2-smart-table [ngClass]="hideCols" [settings]="settings" [source]="sourcebothAdded"
+          (deleteConfirm)="onDeleteConfirm($event)" (userRowSelect)="onRowSelected($event)">
+        </ng2-smart-table>
+      </nb-tab>
+
+      <nb-tab [tabTitle]="('CONTACTPAGE.tab' | translate)[3].title" [badgeText]="listUnassigned.length"
+        [badgeStatus]="'danger'">
+        <ngx-action-header (createButton)="newClicked($event)" (FilterButton)="showFilter($event)"></ngx-action-header>
+        <ng2-smart-table [ngClass]="hideCols" [settings]="settings" [source]="sourceUnassigned"
+          (deleteConfirm)="onDeleteConfirm($event)" (userRowSelect)="onRowSelected($event)">
+        </ng2-smart-table>
+      </nb-tab>
+    </nb-tabset>
+  </nb-card>
+</div>

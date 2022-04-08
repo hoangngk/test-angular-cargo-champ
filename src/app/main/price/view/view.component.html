@@ -1,0 +1,96 @@
+<div class="page">
+    <div class="main-title">
+        {{ 'PRICESVIEWPAGE.title' | translate}}
+    </div>
+    <nb-card>
+        <nb-card-body>
+            <div class="action-v-btns">
+                <a class="delete" nbButton status="danger" (click)="deleteClicked(routeID)"> {{ 'PRICESVIEWPAGE.deleteBtn' | translate }}</a>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 p-none">
+                <div class="sub-title">
+                    {{ 'PRICESVIEWPAGE.info' | translate}}
+                    <button nbButton status="basic" size="small" (click)="editClicked()">
+                        {{ 'PRICESVIEWPAGE.editBtn' | translate}}
+                    </button>
+                </div>
+                <table class="table b-table">
+                    <tbody>
+                        
+
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('PRICESVIEWPAGE.formFields' | translate)[0] }} </span>
+                            </td>
+                            <td>{{ viewDetails?.counterparty }}</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('PRICESVIEWPAGE.formFields' | translate)[1] }}
+                                </span>
+                            </td>
+                            <td>{{ viewDetails?.location }}</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('PRICESVIEWPAGE.formFields' | translate)[2] }}
+                                </span>
+                            </td>
+                            <td>{{ viewDetails?.material }}</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('PRICESVIEWPAGE.formFields' | translate)[3] }}
+                                </span>
+                            </td>
+                            <td>{{ viewDetails?.price }}</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('PRICESVIEWPAGE.formFields' | translate)[4] }}
+                                </span>
+                            </td>
+                            <td>{{ viewDetails?.validFrom }}</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('PRICESVIEWPAGE.formFields' | translate)[5] }}
+                                </span>
+                            </td>
+                            <td>{{ viewDetails?.validUntil }}</td>
+                            
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="col-md-12 p-none">
+                <div class="sub-title">
+                    {{ ('PRICESVIEWPAGE.locations.title' | translate) }}
+                </div>
+                <!-- <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+                </ng2-smart-table> -->
+                coming soon 
+            </div>
+
+        </nb-card-body>
+    </nb-card>
+</div>

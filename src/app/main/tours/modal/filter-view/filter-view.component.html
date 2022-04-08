@@ -1,0 +1,41 @@
+<nb-card class="filterview">
+    <nb-card-header> {{ ('TOURSFILTERPAGE.title' | translate) }}</nb-card-header>
+    <nb-card-body>
+        <table class="table b-table">
+            <tbody>
+                <tr *ngFor="let column of columns;let i = index" dragula='bag-items'>
+                    <td class="no-shades" width="42px">
+                        <nb-checkbox (checkedChange)="hideColumn(column.title , $event)"
+                            [checked]="settings.columns[column.title].isSelected"
+                            [disabled]="column.title === 'id' || column.title === 'actions'">
+
+                        </nb-checkbox>
+                    </td>
+                    <td>{{ settings.columns[column.title].title }}</td>
+
+                    <td class="no-shades">
+                        <a href="javascript(void)">
+                            <img src="../../../../assets/icon/reorder.svg" alt="Reorder Menu" class="action">
+                        </a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </nb-card-body>
+
+    <nb-card-footer>
+
+        <div class="action">
+            <button nbButton (click)="dismiss()">
+                {{('ACTIONHEADER.actionCommon.back.title' | translate)}}
+            </button>
+
+            <button nbButton status="primary" (click)="apply()" type="submit">
+                {{('ACTIONHEADER.actionCommon.confirm.title' | translate)}}
+            </button>
+        </div>
+    </nb-card-footer>
+
+</nb-card>

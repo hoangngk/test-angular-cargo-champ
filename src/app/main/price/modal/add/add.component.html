@@ -1,0 +1,229 @@
+<nb-card class="full">
+  <nb-card-header
+    >{{
+      data
+        ? ("PRICEADDEDITTPAGE.edit" | translate)
+        : ("PRICEADDEDITTPAGE.add" | translate)
+    }}
+    {{ "PRICEADDEDITTPAGE.title" | translate }}
+  </nb-card-header>
+  <nb-card-body>
+    <form [formGroup]="priceForm" (ngSubmit)="savePriceDetails()">
+      <!-- <div class="form-group">
+                <input type="text" nbInput fullWidth placeholder="{{ ('PRICEADDEDITTPAGE.formFields' | translate)[0] }}"
+                    formControlName="name">
+            </div> -->
+
+      <div class="form-group">
+        <input
+          #autoInput
+          fullWidth
+          nbInput
+          type="text"
+          (input)="onChange()"
+          formControlName="counterparty"
+          [placeholder]="('PRICEADDEDITTPAGE.formFields' | translate)[1]"
+          [nbAutocomplete]="auto"
+        />
+
+        <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+          <nb-option
+            *ngFor="let option of filteredOptions$ | async"
+            [value]="option.name"
+          >
+            {{ option.name }}
+          </nb-option>
+        </nb-autocomplete>
+
+        <!-- <ng-container *ngIf="submitted || ( f.counterparty.invalid && f.counterparty.touched )">
+                    <p class="caption status-danger" *ngIf="f.counterparty.errors?.required">
+                        Counter Party is required!
+                    </p>
+                </ng-container> -->
+      </div>
+
+      <div class="form-group">
+        <input
+          #autoInputLocation
+          fullWidth
+          nbInput
+          type="text"
+          (input)="onChangeLocation()"
+          formControlName="location"
+          placeholder="{{ ('PRICEADDEDITTPAGE.formFields' | translate)[2] }}"
+          [nbAutocomplete]="autoLocation"
+        />
+
+        <nb-autocomplete
+          #autoLocation
+          (selectedChange)="onSelectionChangeLocation($event)"
+        >
+          <nb-option
+            *ngFor="let option of filteredOptionsLocation$ | async"
+            [value]="option.name"
+          >
+            {{ option.name }}
+          </nb-option>
+        </nb-autocomplete>
+      </div>
+
+      <nb-accordion>
+        <nb-accordion-item *ngFor="let mat of materialFormGET.controls; let i = index">
+          <nb-accordion-item-header>
+            <span>{{ ('PRICEADDEDITTPAGE.formFieldsMaterial.headers' | translate)[0] }} :<label></label> gf </span>
+
+            <div class="price">
+                <label for="">{{ ('PRICEADDEDITTPAGE.formFieldsMaterial.headers' | translate)[1] }} : </label> 12E/m3
+            </div>
+          </nb-accordion-item-header>
+          <nb-accordion-item-body>
+            <div
+              
+              style="margin-top: 10px"
+            >
+              <div class="opentime" [formGroup]="mat">
+                <div class="box">
+                  <div class="form-group">
+                    <input
+                      #autoInputMaterial
+                      fullWidth
+                      nbInput
+                      type="text"
+                      (input)="onChangeMaterial()"
+                      formControlName="id"
+                      placeholder="{{ ('PRICEADDEDITTPAGE.formFieldsMaterial.formFields' | translate)[0] }}"
+                      [nbAutocomplete]="autoMaterial"
+                    />
+                    <nb-autocomplete
+                      #autoMaterial
+                      (selectedChange)="onSelectionChangeMaterial($event)"
+                    >
+                      <nb-option
+                        *ngFor="let option of filteredOptionsMaterial$ | async"
+                        [value]="option.name"
+                      >
+                        {{ option.name }}
+                      </nb-option>
+                    </nb-autocomplete>
+                  </div>
+                  <div class="form-group d-flex">
+                    <input
+                      nbInput
+                      [placeholder]="
+                       ('PRICEADDEDITTPAGE.formFieldsMaterial.formFields' | translate)[1] 
+                      "
+                      formControlName="name"
+                    />
+
+                    <a
+                      class="add_button"
+                      nbButton
+                      status="primary"
+                      size="small"
+                      style="cursor: pointer"
+                    >
+                    {{('PRICEADDEDITTPAGE.formFieldsMaterial.buttons' | translate)[0]}}
+                    </a>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="form-group">
+                    <input
+                      nbInput
+                      fullWidth
+                      [placeholder]="
+                    ('PRICEADDEDITTPAGE.formFieldsMaterial.formFields' | translate)[2] 
+                      "
+                      [nbDatepicker]="dateTimeValidFORM"
+                      formControlName="validFrom"
+                    />
+                    <nb-datepicker #dateTimeValidFORM></nb-datepicker>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      nbInput
+                      fullWidth
+                      [placeholder]="
+                       ('PRICEADDEDITTPAGE.formFieldsMaterial.formFields' | translate)[3] 
+                      "
+                      [nbDatepicker]="dateTimeValisUntill"
+                      formControlName="validUntil"
+                    />
+                    <nb-datepicker #dateTimeValisUntill></nb-datepicker>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <div class="form-group">
+                    <input
+                      nbInput
+                      fullWidth
+                      [placeholder]="
+                      ('PRICEADDEDITTPAGE.formFieldsMaterial.formFields' | translate)[4] 
+                      "
+                      formControlName="price"
+                    />
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="">{{ ('PRICEADDEDITTPAGE.formFieldsMaterial.formFields' | translate)[5] }}</label>
+                    <nb-select
+                      selected="m3"
+                      formControlName="conversionTonneCubicMeter"
+                    >
+                      <nb-option value="t">t</nb-option>
+                      <nb-option value="m³">m³</nb-option>
+                      <nb-option value="charge">charge</nb-option>
+                    </nb-select>
+                  </div>
+                </div>
+
+                <div class="mat_save">
+                  <div class="action">
+                    <button nbButton (click)="dismiss()">
+                   {{     ('PRICEADDEDITTPAGE.formFieldsMaterial.buttons' | translate)[1]}}
+                    </button>
+
+                    <button
+                      nbButton
+                      status="primary"
+                      (click)="savePriceDetails()"
+                    >
+                 {{   ('PRICEADDEDITTPAGE.formFieldsMaterial.buttons' | translate)[2]}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+      </nb-accordion>
+
+      <div class="form-group">
+        <a
+        nbButton
+        status="primary"
+        size="small"
+        style="cursor: pointer"
+        (click)="addMaterialMore()"
+      >
+      {{('PRICEADDEDITTPAGE.formFieldsMaterial.buttons' | translate)[3]}}
+      </a>
+      </div>
+    </form>
+  </nb-card-body>
+
+  <nb-card-footer>
+    <div class="action">
+      <button nbButton (click)="dismiss()">
+        {{ "PRICEADDEDITTPAGE.action.back.title" | translate }}
+      </button>
+
+      <button nbButton status="primary" (click)="savePriceDetails()">
+        {{ "PRICEADDEDITTPAGE.action.confirm.title" | translate }}
+      </button>
+    </div>
+  </nb-card-footer>
+</nb-card>

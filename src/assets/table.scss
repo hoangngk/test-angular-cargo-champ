@@ -1,0 +1,269 @@
+.nb-theme-custom-theme nb-layout-header nav{
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 25%);
+}
+
+.nb-theme-custom-theme ng2-smart-table{
+    table tr th,  table tr th a{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.006em;
+        color: #6E7C87!important;
+    }
+
+
+     table tr th,  table tr td{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.006em;
+        color: #252C32;
+    }
+
+     table tr th,  table tr td{
+        padding: 8px 16px;
+    }
+
+    tbody tr:nth-child(2n){
+        background-color: transparent!important;
+    }
+    nav.ng2-smart-pagination-nav .pagination li.active a,  
+    nav.ng2-smart-pagination-nav .pagination li.active a:hover,  
+    nav.ng2-smart-pagination-nav .pagination li.active a:focus,  
+    nav.ng2-smart-pagination-nav .pagination li.active > span,  
+    nav.ng2-smart-pagination-nav .pagination li.active > span:hover,  
+    nav.ng2-smart-pagination-nav .pagination li.active > span:focus{
+        color: #0E73F6;
+        background-color: #EBF7FF;
+        font-weight: bold;
+    }
+
+     nav.ng2-smart-pagination-nav .pagination li a:hover,  nav.ng2-smart-pagination-nav .pagination li > span:hover{
+        background-color: transparent;
+        border-color: #0E73F6;
+        color: #252C32;
+        text-decoration: none;
+    }
+     nav.ng2-smart-pagination-nav .pagination li a,  nav.ng2-smart-pagination-nav .pagination li > span{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: #252C32;
+    }
+
+
+    nav.ng2-smart-pagination-nav .pagination {
+        border: none;
+        li {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -0.006em;
+            color: #252C32;
+            border: none!important;
+            border-radius: 50%;
+            &.active{
+                color: #0E73F6;
+                font-weight: bold;
+            }
+            
+        }
+    }
+     table tr.ng2-smart-titles th a.sort.asc::after,  table tr.ng2-smart-titles th a.sort.desc::after{
+        border-bottom-color: #6E7C87;
+     }
+}
+
+.nb-theme-custom-theme nb-layout .layout .layout-container .content .columns nb-layout-column{
+    padding: 15px;
+}
+
+
+
+
+// Sidemenu
+.nb-theme-custom-theme nb-menu .menu-item a{
+    color: #252C32;      
+    nb-icon img{
+        &.colored{
+            display: none;
+        }
+        &.no-colored{
+            display: block;
+        }
+    }
+   
+    &.active , &:hover{
+        color: #0E73F6; 
+        nb-icon img{
+            &.colored{
+                display: block;
+            }
+            &.no-colored{
+                display: none;
+            }
+        }
+    }
+}
+
+nb-action.search{
+    border-left: 1px solid #edf1f7 !important
+}
+
+
+
+
+
+//tab -module
+.nb-theme-custom-theme nb-tabset{
+    position: relative;
+    .tab {
+        .tab-link{
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.006em;
+            color: #252C32;
+            text-transform: unset;
+           
+    }
+    &.active {
+         
+        .tab-link{
+            font-weight: 600;  
+            color: #252C32;
+        }
+        .tab-link::before{
+            background-color: #252C32;
+        }
+    }   
+    }
+}
+
+
+
+
+
+// side-bar
+
+.nb-theme-custom-theme nb-menu .menu-group, .nb-theme-custom-theme nb-menu .menu-item a{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #252C32;
+}
+
+
+.b-table{
+    td{
+        border: 1px solid #b9b9b9;
+        padding: 10px 8px;
+        
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+        span{
+            font-weight: 600;
+        }
+
+        &.no-shades{
+            border: none;
+        }
+    }
+
+}
+
+
+
+
+// Modal
+
+.nb-theme-custom-theme
+{
+     [nbInput].status-basic {
+        background-color: #fff;
+        border-color: #ACAEAE;
+        color: #222b45;
+        border-radius: 6px;
+  
+}
+[nbInput].size-medium {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #9AA6AC;
+
+    padding: 4px 13px;
+}
+nb-dialog-container {
+    nb-card-header{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.022em;
+        color: #252C32;
+        border: none;
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+    nb-card-footer{
+        border: none;
+        padding-top: 0;
+       div.action{
+        float: right;
+        margin-left: auto;
+        button{
+            margin-left: 10px;
+            text-transform: none!important;
+        }
+       }
+    }
+
+}
+}
+// Modal
+.model-full{
+   @media screen  and (min-width:950px){
+    nb-card.full{
+        width: 845px;
+    }
+   }
+   @media screen  and (max-width:950px){
+    nb-card{
+        width: 95vw!important;
+    }
+   }
+}
+
+.model-filterview{
+    @media screen  and (min-width:950px){
+     nb-card.filterview{
+         width: 473px;
+     }
+    }
+    @media screen  and (max-width:950px){
+     nb-card{
+         width: 95vw!important;
+     }
+    }
+ }

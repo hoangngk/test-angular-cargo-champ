@@ -1,0 +1,157 @@
+<nb-card class="full">
+    <nb-card-header>{{data ?( 'LOCATIONSADDPAGE.edit' | translate) : ('LOCATIONSADDPAGE.add' | translate) }} {{
+        'LOCATIONSADDPAGE.title' | translate}}</nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="locationForm" (ngSubmit)="submitForm()">
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[1].title" formControlName="name">
+                    <ng-container *ngIf="submitted || ( f.name.invalid && f.name.touched )">
+                        <p class="caption status-danger" *ngIf="f.name.errors?.required">
+                            {{('LOCATIONSADDPAGE.formFields' | translate)[1].error}}
+                        </p>
+                    </ng-container>
+            </div>
+
+            <div class="form-group">
+                <input type="text" nbInput fullWidth
+                    [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[2].title" formControlName="description">
+            </div>
+
+            <div *ngFor="let ticket of t.controls; let i = index">
+                <div class="addresse" [formGroup]="ticket">
+                    <div class="form-group">
+                        <input type="text" nbInput fullWidth
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[3].title"
+                            formControlName="street">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" nbInput fullWidth
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[4].title"
+                            formControlName="postCode">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" nbInput fullWidth
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[5].title" formControlName="city">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" nbInput fullWidth
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[6].title"
+                            formControlName="country">
+                    </div>
+                </div>
+            </div>
+            <div *ngFor="let contact of c.controls; let i = index">
+                <div class="contacts" [formGroup]="contact">
+                    <div class="form-group">
+                        <input type="text" nbInput fullWidth
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[7].title" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" nbInput fullWidth
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[8].title"
+                            formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" nbInput fullWidth
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[9].title"
+                            formControlName="mobile">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" nbInput fullWidth
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[10].title"
+                            formControlName="phone">
+                    </div>
+                </div>
+            </div>
+
+            <nb-accordion>
+                <nb-accordion-item>
+                    <nb-accordion-item-header>
+                        {{('COUNTERPARTYADDPAGE.formFields' | translate)[9].title}}
+                    </nb-accordion-item-header>
+                    <nb-accordion-item-body>
+                        <a class="add_button" nbButton status="primary" size="small" (click)="addWeekItem()" style="cursor: pointer;">
+                            {{('COUNTERPARTYADDPAGE.formFields' | translate)[13].title}}
+                        </a>
+                        <div *ngFor="let opTime of opt.controls; let i = index" style="margin-top: 10px;">
+                            <div class="opentime" [formGroup]="opTime">
+                                <div class="form-group">
+                                    <nb-select class="options" formControlName="dayOfWeek" style="min-width:220px"
+                                        [placeholder]="('COUNTERPARTYADDPAGE.formFields' | translate)[10].title">
+                                        <nb-option *ngFor="let c of weeks" [value]="c.value"> {{ c.title }}</nb-option>
+                                    </nb-select>
+                                </div>
+                                <div class="form-group">
+                                    <nb-select class="options" formControlName="startTime" style="min-width:220px"
+                                        [placeholder]="('COUNTERPARTYADDPAGE.formFields' | translate)[11].title">
+                                        <nb-option *ngFor="let c of times" [value]="c.value"> {{ c.title }}</nb-option>
+                                    </nb-select>
+                                </div>
+        
+                                <div class="form-group">
+                                    <nb-select class="options" formControlName="endTime" style="min-width:220px"
+                                        [placeholder]="('COUNTERPARTYADDPAGE.formFields' | translate)[12].title">
+                                        <nb-option *ngFor="let c of times" [value]="c.value"> {{ c.title }}</nb-option>
+                                    </nb-select>
+                                </div>
+                            </div>
+                        </div>
+                    </nb-accordion-item-body>
+                </nb-accordion-item>
+            </nb-accordion>
+
+            <div class="form-group">
+                <div class="custom-add">
+                    <div>
+                        <label for="">{{('LOCATIONSADDPAGE.formFields' | translate)[11].label}}</label> <br>
+                        <nb-select multiple style="min-width:250px" class="options" formControlName="counterparties"
+                            [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[11].title">
+                            <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option.name">
+                                {{ option.name }}
+                            </nb-option>
+                        </nb-select>
+                    </div>
+
+                    <div class="add-form ">
+                        <form [formGroup]="counterPartyForm" (ngSubmit)="submitFormCounterParty()">
+                            <input type="text" nbInput formControlName="name"
+                                [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[12].title">
+
+                            <button type="submit" nbButton status="primary">
+                                {{('LOCATIONSADDPAGE.formFields' | translate)[12].label}}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <nb-select fullWidth class="options" formControlName="keyCode"
+                    [placeholder]="('LOCATIONSADDPAGE.formFields' | translate)[13].title">
+                    <nb-option *ngFor="let c of placesType" [value]="c.keyCode"> {{ c.title }}</nb-option>
+                </nb-select>
+
+            </div>
+
+        </form>
+    </nb-card-body>
+
+    <nb-card-footer>
+
+        <div class="action">
+            <button nbButton (click)="dismiss()">
+                {{('LOCATIONSADDPAGE.action.back.title' | translate)}}
+            </button>
+
+            <button nbButton status="primary" (click)="submitForm()">
+                {{('LOCATIONSADDPAGE.action.confirm.title' | translate)}}
+            </button>
+        </div>
+    </nb-card-footer>
+
+</nb-card>

@@ -1,0 +1,78 @@
+<div class="page">
+    <div class="main-title">
+        {{ 'TRAILERSVIEWPAGE.title' | translate}}
+    </div>
+
+    <nb-card>
+        <nb-card-body>
+            <div class="action-v-btns">
+                <a class="delete" nbButton status="danger" (click)="deleteClicked(routeID)"> {{ 'TRAILERSVIEWPAGE.deleteBtn' | translate }}</a>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 p-none">
+                <div class="sub-title">
+                    {{ 'TRAILERSVIEWPAGE.info' | translate}}
+                    <button nbButton status="basic" size="small" (click)="editClicked()">
+                        {{ 'TRAILERSVIEWPAGE.editBtn' | translate}}
+                    </button>
+                </div>
+
+                <table class="table b-table">
+                    <tbody>
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('TRAILERSVIEWPAGE.formFields' | translate)[0] }}
+                                </span>
+                            </td>
+                            <td>{{ viewDetails?.name }}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('TRAILERSVIEWPAGE.formFields' | translate)[1] }} </span>
+                            </td>
+                            <td>{{ viewDetails?.vehicleCategory.name }}</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('TRAILERSVIEWPAGE.formFields' | translate)[2] }}
+                                </span>
+                            </td>
+                            <td>{{ viewDetails?.licenseNumber }}</td>
+
+                        </tr>
+                        <!-- <tr>
+                            <td class="col-3">
+                                <span>
+                                    {{ ('TRAILERSVIEWPAGE.formFields' | translate)[3] }}
+                                </span>
+                            </td>
+                            <td>{{ viewDetails?.licenseNumber }}</td>
+
+                        </tr> -->
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="col-md-12 p-none">
+                <!-- <div class="sub-title">
+                    {{ ('TRAILERSVIEWPAGE.subTable.title' | translate) }}
+                </div>
+                <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+                </ng2-smart-table> -->
+            </div>
+
+        </nb-card-body>
+        <nb-card-footer>
+            <button class="back-buttton" nbButton status="basic" (click)="redirectToMain()">
+                {{ 'TRAILERSVIEWPAGE.backBtn' | translate }}
+            </button>
+        </nb-card-footer>
+    </nb-card>
+</div>

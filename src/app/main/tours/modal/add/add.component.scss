@@ -1,0 +1,77 @@
+label {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #252c32;
+    margin-right: 10px;
+}
+
+.add-location {
+    margin-left: 10px;
+    text-transform: unset !important;
+}
+
+.inline-form {
+    display: flex;
+    .half {
+        width: 50%;
+    }
+}
+.opentime {
+    display: flex;
+    justify-content: space-between;
+}
+.add_button {
+    margin-left: 0 !important;
+}
+::ng-deep .nb-theme-custom-theme nb-accordion-item:last-child.collapsed nb-accordion-item-header {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #252c32;
+    margin-right: 10px;
+}
+
+::ng-deep .nb-theme-custom-theme nb-accordion {
+    box-shadow: none;
+    border: 1px solid #acaeae;
+    margin-bottom: 10px;
+}
+.trip-name {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #252c32;
+}
+
+::ng-deep .form-group.ex-ic{
+    position: relative;
+
+    input:focus + nb-icon.ex-icon{
+        transform: translateY(0%) rotate(180deg)!important;
+    }
+}
+.ex-icon {
+    right: 0.41rem !important;
+    top: 7px;
+    color: #96a1b7;
+    font-size: 1.5em;
+    position: absolute;
+
+    transition-duration: 0.15s;
+    transition-property: transform;
+    transition-timing-function: ease-in;
+
+    &.open{
+        transform: translateY(0%) rotate(180deg);
+    }
+}

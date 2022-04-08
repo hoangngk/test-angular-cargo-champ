@@ -1,0 +1,1129 @@
+{
+  "ACTIONHEADER": {
+    "placeholder": "Search",
+    "newBtn": "New",
+    "filterOptions": [
+      {
+        "title": "Custom",
+        "value": "custom"
+      },
+      {
+        "title": "Show All",
+        "value": "all"
+      }
+    ],
+    "actionCommon": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Apply"
+      }
+    }
+  },
+  "MATERIALPAGE": {
+    "title": "Materials",
+    "search_placeholder": "Search",
+    "filterPlaceholder": [
+      {
+        "title": "Show All",
+        "value": "all"
+      },
+      {
+        "title": "Custom",
+        "value": "custom"
+      }
+    ],
+    "newButton": "New",
+    "tableSetting": []
+  },
+  "MATERIALVIEWPAGE": {
+    "title": "Materials",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": [
+      "Article Numbers",
+      "Article Name",
+      "Material Group",
+      "Short Description",
+      "Granulation",
+      "Unit of Measurement",
+      "Density"
+    ],
+    "locations": {
+      "title": "Suppliers",
+      "searchPlaceholder": ""
+    }
+  },
+  "MATERIALADDEDITTPAGE": {
+    "title": "Material",
+    "add": "Add",
+    "edit": "Edit",
+    "formFields": [
+      {
+        "title": "Material Name",
+        "error": "Material Name is Required."
+      },
+      {
+        "title": "Item Number",
+        "error": "Item Number is Required."
+      },
+      {
+        "title": "Material Group",
+        "error": "Material Group is Required."
+      },
+      {
+        "title": "Short Description",
+        "error": "Brief Description is required!"
+      },
+      {
+        "title": "Granulation",
+        "error": "Granulation is Required."
+      },
+      {
+        "title": "Unit of measurement",
+        "error": "Measurement is Required."
+      },
+      {
+        "title": "Density (t/m^3)",
+        "error": "."
+      },
+      {
+        "title": "Traits",
+        "error": "."
+      },
+      {
+        "title": "Choose Location",
+        "error": "Location is required!",
+        "label": "Add Existing Location"
+      },
+      {
+        "title": "New Location Name",
+        "label": "Add New"
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "MATERIALFILTERPAGE": {
+    "title": "Material - View"
+  },
+  "CONTACTPAGE": {
+    "title": "Counter Party",
+    "search_placeholder": "Search",
+    "tab": [
+      {
+        "title": "Supplier"
+      },
+      {
+        "title": "Consumer"
+      },
+      {
+        "title": "Both"
+      },
+      {
+        "title": "Unassigned"
+      }
+    ],
+    "newButton": "New",
+    "tableSetting": []
+  },
+  "COUNTERPARTYVIEWPAGE": {
+    "title": "Counter Party",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": ["Name", "Type", "Opening Time", "Contact Details"],
+    "subTable": {
+      "title": "Locations",
+      "searchPlaceholder": "Search"
+    }
+  },
+  "COUNTERPARTYADDPAGE": {
+    "title": "Counter Party",
+    "add": "Add",
+    "edit": "Edit",
+    "formFields": [
+      {
+        "title": "Counter Party Title",
+        "error": "Counter Party Title is required!"
+      },
+      {
+        "title": "Brief Description",
+        "error": "Counter Party Title is required!"
+      },
+      {
+        "title": "Counterparty Type",
+        "error": "Counter Type is required!"
+      },
+      {
+        "title": "Choose Location",
+        "error": "Location is required!",
+        "label": "Add Existing Location"
+      },
+      {
+        "title": "New Location Name",
+        "label": "Add Location"
+      },
+      {
+        "title": "Contact Name",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Contact Email",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Contact Mobile",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Contact Phone",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Opening Time",
+        "error": ""
+      },
+      {
+        "title": "Day",
+        "error": ""
+      },
+      {
+        "title": "Start Time",
+        "error": ""
+      },
+      {
+        "title": "End Time",
+        "error": ""
+      },
+      {
+        "title": "ADD"
+      }
+    ],
+    "counterPartyType": [
+      {
+        "title": "Both",
+        "value": ["SUPPLIER", "CONSUMER"],
+        "keyCode": 0
+      },
+      {
+        "title": "SUPPLIER",
+        "value": ["SUPPLIER"],
+        "keyCode": 1
+      },
+      {
+        "title": "CONSUMER",
+        "value": ["CONSUMER"],
+        "keyCode": 2
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "COUNTERFILTERPAGE": {
+    "title": "Counter Party - View"
+  },
+  "TOURSPAGE": {
+    "title": "Tours",
+    "tab": [
+      {
+        "title": "Loading"
+      },
+      {
+        "title": "Unloading"
+      },
+      {
+        "title": "Both"
+      }
+    ],
+    "search_placeholder": "Search",
+    "filterPlaceholder": [
+      {
+        "title": "Show All",
+        "value": "all"
+      },
+      {
+        "title": "Custom",
+        "value": "custom"
+      }
+    ],
+    "newButton": "New",
+    "tableSetting": []
+  },
+  "TOURSVIEWPAGE": {
+    "title": "Tour",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": [
+      "Loading Location ",
+      "Unloading Location",
+      "Type",
+      "Status",
+      "Material",
+      "Amount",
+      "Unit of Measurement",
+      "Deadline Date",
+      "Execution Date",
+      "Driver",
+      "Comments",
+      "Order ID"
+    ],
+    "subTable": {
+      "title": "Trip",
+      "searchPlaceholder": "Search"
+    }
+  },
+  "TOURSFILTERPAGE": {
+    "title": "Tours - View"
+  },
+  "TOURSADDEDITTPAGE": {
+    "title": "Tour",
+    "add": "Add",
+    "edit": "Edit",
+    "formFields": [
+      {
+        "title": "Loading Location",
+        "error": "Loading Location is required!"
+      },
+      {
+        "title": "Unloading Location",
+        "error": "Unloading Location is required!"
+      },
+      {
+        "title": "Billed To Contact",
+        "error": ""
+      },
+      {
+        "title": "Material",
+        "error": ""
+      },
+      {
+        "title": "Amount",
+        "error": ""
+      },
+      {
+        "title": "Execution Date",
+        "error": ""
+      },
+      {
+        "title": "Trailer Category",
+        "error": ""
+      },
+      {
+        "title": "Link to Order",
+        "error": ""
+      },
+      {
+        "title": "Type",
+        "error": ""
+      },
+      {
+        "title": "Status",
+        "error": ""
+      },
+      {
+        "title": "Amount",
+        "error": ""
+      },
+      {
+        "title": "Unit of Measurement",
+        "error": ""
+      },
+      {
+        "title": "Execution Date",
+        "error": ""
+      },
+      {
+        "title": "Deadline Date",
+        "error": ""
+      },
+      {
+        "title": "Driver",
+        "error": ""
+      },
+      {
+        "mainTitle": "Trips",
+        "title": "",
+        "error": "",
+        "fields": ["Trip", "Amount", "Status", "Comments"],
+        "button": "ADD"
+      },
+      {
+        "title": "Comments",
+        "error": ""
+      }
+    ],
+    "toursType": [
+      {
+        "const": "TRADE",
+        "description": "Trade"
+      },
+      {
+        "const": "DISPOSAL",
+        "description": "Disposal"
+      },
+      {
+        "const": "FREIGHT",
+        "description": "Freight"
+      }
+    ],
+    "toursStatus": [
+      {
+        "const": "OPEN",
+        "description": "Open"
+      },
+      {
+        "const": "TRIPS-COMPLETED",
+        "description": "Trip(s) completed"
+      },
+      {
+        "const": "FINISHED",
+        "description": "Finished"
+      }
+    ],
+    "trailerCategoryType": [
+      {
+        "const": "KIPPER-DUMP-TRUCK",
+        "description": "Kipper Dump Truck"
+      },
+      {
+        "const": "TAILGATE ",
+        "description": "Tailgate "
+      },
+      {
+        "const": "CANVAS-COVER",
+        "description": "Canvas Cover"
+      },
+      {
+        "const": "OTHER",
+        "description": "Other"
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "LOCATIONSPAGE": {
+    "title": "Locations",
+    "search_placeholder": "Search",
+    "newButton": "New",
+    "tableSetting": [],
+    "tab": [
+      {
+        "title": "Loading"
+      },
+      {
+        "title": "Unloading"
+      },
+      {
+        "title": "Both"
+      },
+      {
+        "title": "Unassigned"
+      }
+    ]
+  },
+  "LOCATIONSVIEWPAGE": {
+    "title": "Locations",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": [
+      "Name",
+      "Short Description",
+      "Address",
+      "Contacts",
+      "Opening Time"
+    ],
+    "subTable": {
+      "title": "Materials",
+      "searchPlaceholder": "Search"
+    }
+  },
+  "LOCATIONSADDPAGE": {
+    "title": "Location",
+    "add": "Add",
+    "edit": "Edit",
+    "formFields": [
+      {
+        "title": "Client",
+        "error": "Client is required!"
+      },
+      {
+        "title": "Location Name",
+        "error": "Location is required!"
+      },
+      {
+        "title": "Short Description",
+        "error": "Description is required!"
+      },
+      {
+        "title": "Address Street",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Address Post Code",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Address City",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Address Country",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Contact Name",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Contact Email",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Contact Mobile",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Contact Phone",
+        "error": "Address Street is required!"
+      },
+      {
+        "title": "Choose Counter Party",
+        "error": "Counter Party is required!",
+        "label": "Add Existing Counter Party"
+      },
+      {
+        "title": "New Counter Party Name",
+        "label": "Add Counter Party"
+      },
+      {
+        "title": "Location Typ!",
+        "error": "Location Type is required!"
+      },
+      {
+        "title": "Opening Time",
+        "error": ""
+      },
+      {
+        "title": "Day",
+        "error": ""
+      },
+      {
+        "title": "Start Time",
+        "error": ""
+      },
+      {
+        "title": "End Time",
+        "error": ""
+      },
+      {
+        "title": "ADD"
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "LOCATIONSFILTERPAGE": {
+    "title": "Location - View"
+  },
+  "ORDERSPAGE": {
+    "title": "Offers/Orders",
+    "search_placeholder": "Search",
+    "newButton": "New",
+    "tableSetting": [],
+    "tab": [
+      {
+        "title": "Loading"
+      },
+      {
+        "title": "Unloading"
+      },
+      {
+        "title": "Both"
+      }
+    ]
+  },
+  "ORDERSVIEWPAGE": {
+    "title": "Offers/Orders",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": [
+      "ID",
+      "Billed To",
+      "Valid from - Valid To",
+      "Reference",
+      "To refer to"
+    ],
+    "subTable": {
+      "title": "Details"
+    }
+  },
+  "ORDERADDEDITTPAGE": {
+    "title": "Order",
+    "add": "Add",
+    "edit": "Edit",
+    "formFields": ["Note", "Billed To", "Status", "Type", "Offer Date"],
+    "formFieldsTop": {
+      "formFields": [
+        "Billed to Contact",
+        "New Contact",
+        "Valid From",
+        "Valid Until",
+        "Reference",
+        "To refer to"
+      ],
+      "buttons": ["Add New", "Add New Transaction +"]
+    },
+    "orderType": [
+      {
+        "const": "TRADE",
+        "description": "Trade"
+      },
+      {
+        "const": "DISPOSAL",
+        "description": "Disposal"
+      },
+      {
+        "const": "FREIGHT",
+        "description": "Freight"
+      }
+    ],
+    "orderStatus": [
+      {
+        "const": "OFFER",
+        "description": "Offer"
+      },
+      {
+        "const": "SINGLE",
+        "description": "Single"
+      },
+      {
+        "const": "MULTI",
+        "description": "Multi"
+      },
+      {
+        "const": "IN-TRANSITION",
+        "description": "In transition"
+      },
+      {
+        "const": "PAID-IN-FULL",
+        "description": "Paid in full"
+      },
+      {
+        "const": "TOUR-COMPLETE",
+        "description": "Complete"
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "ORDERSFILTERPAGE": {
+    "title": "Offers/Orders - View"
+  },
+  "DRIVERSPAGE": {
+    "title": "Drivers",
+    "search_placeholder": "Search",
+    "newButton": "New",
+    "tableSetting": [],
+    "tab": [
+      {
+        "title": "Loading"
+      },
+      {
+        "title": "Unloading"
+      },
+      {
+        "title": "Both"
+      }
+    ]
+  },
+  "DRIVERSVIEWPAGE": {
+    "title": "Driver",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": ["Vehicle", "Category", "Number Plate"],
+    "subTable": {
+      "title": "Tours"
+    }
+  },
+
+  "DRIVERSADDEDITTPAGE": {
+    "title": "Driver",
+    "add": "Add",
+    "edit": "Edit",
+    "formHeaderTitles": [
+      "Contact Details",
+      "Driver’s License ",
+      "Driver’s Scorecard ",
+      "Vacation Details",
+      "Wage Type",
+      "Driver’s Specifications",
+      "Sleep Frequency",
+      "Equipment in Truck",
+      "Notes"
+    ],
+    "formFields": [
+      "First Name",
+      "Last Name",
+      "Street",
+      "City",
+      "Postcode",
+      "Country",
+      "Telephone Number",
+      "Mobile Number",
+      "Email",
+      "Date of Birth",
+      "Nationality",
+      "Languages Spoken"
+    ],
+    "formFieldDriverLicence": [
+      "Driver’s License Number",
+      "Driver’s License Class(es)",
+      "Driver’s License",
+      "95 Certification",
+      "Valid until"
+    ],
+    "formFieldDriverScorecard": [
+      "Scorecard Number",
+      "Upload Scorecard",
+      "Valid until"
+    ],
+    "formFieldVacationDetails": [
+      "Vacation Days Per Year",
+      "Remaining vacation days",
+      "days"
+    ],
+    "wageType": [
+      {
+        "label": "Wage Type",
+        "type": "radio",
+        "values": [
+          {
+            "label": "Hourly",
+            "value": "hourly"
+          },
+          {
+            "label": "Salary",
+            "value": "salary"
+          },
+          {
+            "label": "Temporary",
+            "value": "temporary"
+          }
+        ]
+      }
+    ],
+    "bodyType": [
+      {
+        "label": "Body Type",
+        "type": "checkbox",
+        "values": [
+          {
+            "label": "Skip container",
+            "value": "skip-container"
+          },
+          {
+            "label": "Roll-off container",
+            "value": "roll-off-container"
+          },
+          {
+            "label": "Concrete wagon",
+            "value": "concrete-wagon"
+          },
+          {
+            "label": "Dump truck",
+            "value": "dump-truck"
+          },
+          {
+            "label": "oving floor",
+            "value": "moving-floor"
+          },
+          {
+            "label": "Low loader",
+            "value": "low-loader"
+          }
+        ]
+      }
+    ],
+    "goodsType": [
+      {
+        "label": "Goods",
+        "type": "checkbox",
+        "values": [
+          {
+            "label": "All-wheel drive",
+            "value": "all-wheel-drive"
+          },
+          {
+            "label": "Asphalt",
+            "value": "asphalt"
+          },
+          {
+            "label": "Armourstones",
+            "value": "armourstones"
+          },
+          {
+            "label": "Quicklime",
+            "value": "quicklime"
+          }
+        ]
+      }
+    ],
+    "skillType": [
+      {
+        "label": "Skill",
+        "type": "checkbox",
+        "values": [
+          {
+            "label": "Use an excavator",
+            "value": "use-an-excavator"
+          },
+          {
+            "label": "Use a forklift",
+            "value": "use-a-forklift"
+          },
+          {
+            "label": "Use a wheeloader",
+            "value": "use-a-wheeloader"
+          }
+        ]
+      }
+    ],
+    "lorryType": [
+      {
+        "label": "Lorry Type",
+        "type": "checkbox",
+        "values": [
+          {
+            "label": "Single lorry",
+            "value": "single-lorry"
+          },
+          {
+            "label": "Semi trailer / articulated lorry",
+            "value": "semi-trailer-articulated-lorry"
+          },
+          {
+            "label": "Trailer",
+            "value": "trailer"
+          }
+        ]
+      }
+    ],
+    "frequencyType": [
+      {
+        "label": "Sleep Frequency",
+        "type": "radio",
+        "values": [
+          {
+            "label": "Yes",
+            "value": "YES"
+          },
+          {
+            "label": "Occasionally",
+            "value": "OCCASIONALLY"
+          },
+          {
+            "label": "No",
+            "value": "NO"
+          }
+        ]
+      }
+    ],
+    "equipmentIn": [
+      {
+        "label": "Equipment in Truck",
+        "type": "checkbox",
+        "values": [
+          {
+            "label": "Printer",
+            "value": "printer"
+          },
+          {
+            "label": "Scanner",
+            "value": "scanner"
+          }
+        ]
+      }
+    ],
+    "notes": ["Notes"],
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "DRIVERSFILTERPAGE": {
+    "title": "Drivers - View"
+  },
+  "PRICEPAGE": {
+    "title": "Prices",
+    "search_placeholder": "Search",
+    "filterPlaceholder": [
+      {
+        "title": "Show All",
+        "value": "all"
+      },
+      {
+        "title": "Custom",
+        "value": "custom"
+      }
+    ],
+    "newButton": "New",
+    "tableSetting": []
+  },
+  "PRICESVIEWPAGE": {
+    "title": "Prices",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": [
+      "Counter Party",
+      "Location",
+      "Material",
+      "Price",
+      "Valid From",
+      "Valid Untill"
+    ],
+    "locations": {
+      "title": "Locations"
+    }
+  },
+  "PRICEADDEDITTPAGE": {
+    "title": "Price",
+    "add": "Add",
+    "edit": "Edit",
+    "formFields": ["Name", "Counter Party", "Location"],
+    "formFieldsMaterial": {
+      "headers": ["Material", "Price"],
+      "formFields": [
+        "Material",
+        "New Material",
+        "Valid From",
+        "Valid Until",
+        "Price per unit",
+        "Unit of measurement"
+      ],
+      "buttons": ["Add New", "Cancel", "Confirm", "Add Material"]
+    },
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "PRICEFILTERPAGE": {
+    "title": "Price - View"
+  },
+  "VEHICLESPAGE": {
+    "title": "Vehicles",
+    "search_placeholder": "Search",
+    "filterPlaceholder": [
+      {
+        "title": "Show All",
+        "value": "all"
+      },
+      {
+        "title": "Custom",
+        "value": "custom"
+      }
+    ],
+    "newButton": "New",
+    "tableSetting": []
+  },
+  "VEHICLESVIEWPAGE": {
+    "title": "Vehicles",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": ["Vehicle", "Category", "Material Group", "License Number"],
+    "subTable": {
+      "title": ""
+    }
+  },
+  "VEHICLESADDEDITTPAGE": {
+    "title": "Vehicle",
+    "add": "Add",
+    "edit": "Edit",
+    "formFields": [
+      {
+        "title": "Vehicle Name",
+        "error": "Material Name is Required."
+      },
+      {
+        "title": "Existing Vehicle Category",
+        "error": "Vehicle Category is required!",
+        "label": "Add Vehicle Category"
+      },
+      {
+        "title": "New Vehicle Category",
+        "label": "Add Vehicle Category"
+      },
+      {
+        "title": "Number Plate",
+        "error": "Number Plate is Required."
+      }
+    ],
+    "action": {
+      "back": {
+        "title": "Back"
+      },
+      "confirm": {
+        "title": "Confirm"
+      }
+    }
+  },
+  "VEHICLESFILTERPAGE": {
+    "title": "Vehicles - View"
+  },
+  "TRAILERSPAGE": {
+    "title": "Trailers",
+    "search_placeholder": "Search",
+    "filterPlaceholder": [
+      {
+        "title": "Show All",
+        "value": "all"
+      },
+      {
+        "title": "Custom",
+        "value": "custom"
+      }
+    ],
+    "newButton": "New",
+    "tableSetting": []
+  },
+  "TRAILERSVIEWPAGE": {
+    "title": "Trailers",
+    "info": "Basic Information",
+    "editBtn": "Edit",
+    "deleteBtn": "Delete",
+    "backBtn": "Back to Page",
+    "formFields": ["Vehicle", "Category", "Number Plate"],
+    "subTable": {
+      "title": ""
+    }
+  },
+  "TRAILERSADDEDITTPAGE": {
+    "title": "Trailers",
+    "add": "Add",
+    "edit": "Edit",
+    "formFields": [
+      {
+        "title": "Trailer Name",
+        "error": "Trailer Name is Required."
+      },
+      {
+        "title": "Existing Trailer Category",
+        "error": "Trailer Category is required!",
+        "label": "Add Trailer Category"
+      },
+      {
+        "title": "New Trailer Category",
+        "label": "Add Trailer Category"
+      },
+      {
+        "title": "Number Plate",
+        "error": "Number Plate is Required."
+      }
+    ]
+  },
+  "TRAILERSFILTERPAGE": {
+    "title": "Trailers - View"
+  },
+  "days": [
+    {
+      "title": "Monday",
+      "value": 1
+    },
+    {
+      "title": "Tuesday",
+      "value": 2
+    },
+    {
+      "title": "Wednesday",
+      "value": 3
+    },
+    {
+      "title": "Thursday",
+      "value": 4
+    },
+    {
+      "title": "Friday",
+      "value": 5
+    },
+    {
+      "title": "Saturday",
+      "value": 6
+    },
+    {
+      "title": "Sunday",
+      "value": 7
+    }
+  ],
+  "locationType": [
+    {
+      "title": "Both",
+      "value": ["LOADING", "UNLOADING"],
+      "keyCode": 3
+    },
+    {
+      "title": "LOADING",
+      "value": ["LOADING"],
+      "keyCode": 1
+    },
+    {
+      "title": "UNLOADING",
+      "value": ["UNLOADING"],
+      "keyCode": 2
+    }
+  ]
+}

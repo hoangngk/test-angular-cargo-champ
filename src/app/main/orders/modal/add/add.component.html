@@ -1,0 +1,203 @@
+<nb-card class="full">
+  <nb-card-header
+    >{{
+      data
+        ? ("ORDERADDEDITTPAGE.edit" | translate)
+        : ("ORDERADDEDITTPAGE.add" | translate)
+    }}
+    {{ "ORDERADDEDITTPAGE.title" | translate }}
+  </nb-card-header>
+  <nb-card-body>
+    <!-- {{orderForm.value | json }} -->
+    <form [formGroup]="orderForm" (ngSubmit)="saveMaterialDetails()">
+      <div class="opentime">
+        <div class="box">
+          <div class="form-group">
+            <input
+              nbInput
+              fullWidth
+              [placeholder]="
+                ('ORDERADDEDITTPAGE.formFieldsTop.formFields' | translate)[0]
+              "
+              formControlName="note"
+            />
+          </div>
+          <div class="form-group d-flex">
+            <input
+              nbInput
+              [placeholder]="
+                ('ORDERADDEDITTPAGE.formFieldsTop.formFields' | translate)[1]
+              "
+              formControlName="note"
+            />
+
+            <a
+              class="add_button"
+              nbButton
+              status="primary"
+              size="small"
+              style="cursor: pointer"
+            >
+              {{ ("ORDERADDEDITTPAGE.formFieldsTop.buttons" | translate)[0] }}
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="form-group">
+            <input
+              nbInput
+              fullWidth
+              [placeholder]="
+                ('ORDERADDEDITTPAGE.formFieldsTop.formFields' | translate)[2]
+              "
+              [nbDatepicker]="dateTimeValidFORM"
+              formControlName="validFrom"
+            />
+            <nb-datepicker #dateTimeValidFORM></nb-datepicker>
+          </div>
+          <div class="form-group">
+            <input
+              nbInput
+              fullWidth
+              [placeholder]="
+                ('ORDERADDEDITTPAGE.formFieldsTop.formFields' | translate)[3]
+              "
+              [nbDatepicker]="dateTimeValisUntill"
+              formControlName="validUntil"
+            />
+            <nb-datepicker #dateTimeValisUntill></nb-datepicker>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="form-group">
+            <input
+              nbInput
+              fullWidth
+              [placeholder]="
+                ('ORDERADDEDITTPAGE.formFieldsTop.formFields' | translate)[4]
+              "
+              formControlName="note"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              nbInput
+              fullWidth
+              [placeholder]="
+                ('ORDERADDEDITTPAGE.formFieldsTop.formFields' | translate)[5]
+              "
+              formControlName="note"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="action">
+            <button nbButton status="primary" (click)="dismiss()">
+              {{ ("ORDERADDEDITTPAGE.formFieldsTop.buttons" | translate)[1] }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+
+      <div class="form-group">
+        <input
+          type="text"
+          nbInput
+          fullWidth
+          placeholder="{{ ('ORDERADDEDITTPAGE.formFields' | translate)[0] }}"
+          formControlName="note"
+        />
+        <!-- <ng-container *ngIf="submitted || ( f.name.invalid && f.name.touched )">
+                    <p class="caption status-danger" *ngIf="f.name.errors?.required">
+                        Name is required!
+                    </p>
+                </ng-container> -->
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          nbInput
+          fullWidth
+          placeholder="{{ ('ORDERADDEDITTPAGE.formFields' | translate)[1] }}"
+          formControlName="billedToContact"
+        />
+      </div>
+
+      <div class="form-group">
+        <nb-select
+          fullWidth
+          style="min-width: 250px"
+          class="options"
+          formControlName="type"
+          placeholder="{{ ('ORDERADDEDITTPAGE.formFields' | translate)[2] }}"
+        >
+          <nb-option disabled>
+            {{
+              ("ORDERADDEDITTPAGE.formFields" | translate)[2].title
+            }}</nb-option
+          >
+          <nb-option *ngFor="let c of orderType" [value]="c.const">
+            {{ c.description }}</nb-option
+          >
+        </nb-select>
+        <!-- <ng-container *ngIf="submitted || ( f.articleNumber.invalid && f.articleNumber.touched )">
+                    <p class="caption status-danger" *ngIf="f.articleNumber.errors?.required">
+                        Article Number is required!
+                    </p>
+                </ng-container> -->
+      </div>
+
+      <div class="form-group">
+        <nb-select
+          fullWidth
+          style="min-width: 250px"
+          class="options"
+          formControlName="status"
+          placeholder="{{ ('ORDERADDEDITTPAGE.formFields' | translate)[3] }}"
+        >
+          <nb-option disabled>
+            {{ ("ORDERADDEDITTPAGE.formFields" | translate)[3] }}</nb-option
+          >
+          <nb-option *ngFor="let c of orderStatus" [value]="c.const">
+            {{ c.description }}</nb-option
+          >
+        </nb-select>
+
+        <!-- <ng-container *ngIf="submitted || ( f.type.invalid && f.type.touched )">
+                    <p class="caption status-danger" *ngIf="f.type.errors?.required">
+                        {{('ORDERADDEDITTPAGE.formFields' | translate)[3].error}}
+                    </p>
+                </ng-container> -->
+      </div>
+
+      <div class="form-group">
+        <input
+          nbInput
+          fullWidth
+          placeholder="{{ ('ORDERADDEDITTPAGE.formFields' | translate)[4] }}"
+          [nbDatepicker]="dateTimeValisUntill"
+          formControlName="offerDate"
+        />
+        <nb-datepicker #dateTimeValisUntill></nb-datepicker>
+      </div>
+    </form>
+  </nb-card-body>
+
+  <nb-card-footer>
+    <div class="action">
+      <button nbButton (click)="dismiss()">
+        {{ "ORDERADDEDITTPAGE.action.back.title" | translate }}
+      </button>
+
+      <button nbButton status="primary" (click)="saveMaterialDetails()">
+        {{ "ORDERADDEDITTPAGE.action.confirm.title" | translate }}
+      </button>
+    </div>
+  </nb-card-footer>
+</nb-card>

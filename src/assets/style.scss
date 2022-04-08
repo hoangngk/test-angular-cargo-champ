@@ -1,0 +1,281 @@
+.cdk-global-scrollblock {
+  overflow: hidden !important;
+}
+.main-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.022em;
+  color: #252c32;
+  padding-bottom: 10px;
+  border-bottom: 6px solid #e5e9eb;
+  margin-bottom: 8px;
+}
+
+.action {
+  cursor: pointer;
+  outline: none !important;
+  border: none;
+  background: none;
+}
+
+nb-action.search-table {
+  height: auto;
+  display: flex;
+  align-content: center;
+  border: none !important;
+  padding: 0 4px;
+  margin-right: 4px;
+  svg {
+    margin-top: 1px;
+  }
+  &.search {
+    background: #ffffff;
+    border: 1px solid #dde2e4;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border-left: 1px solid #edf1f7 !important;
+    svg {
+      margin-top: 0;
+    }
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  // margin: 10px 10px 10px auto;
+  position: absolute;
+  top: 3px;
+  right: 2rem;
+  div {
+    margin-left: 10px;
+  }
+}
+.search-table {
+  max-width: 250px;
+}
+.search-field {
+  border: none;
+  outline: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  color: #9aa6ac;
+  padding-left: 10px;
+}
+.show-filter nb-select button {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #252c32;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+}
+
+.sub-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  letter-spacing: -0.022em;
+  color: #252c32;
+}
+
+// filter -add option
+
+.nb-theme-custom-theme nb-select.options button.select-button {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  color: #9aa6ac !important;
+  background: transparent !important;
+  border-color: #acaeae !important;
+  padding: 4px 13px !important;
+}
+
+.nb-theme-custom-theme ng2-smart-table .ng2-smart-actions a.ng2-smart-action {
+  position: absolute;
+}
+.nb-theme-custom-theme nb-select.three-dot.appearance-outline.size-medium .select-button {
+  background-color: transparent;
+  border-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url(./table-icon/3-dots.svg);
+  color: transparent;
+  nb-icon {
+    display: none;
+  }
+}
+
+.no-shades a {
+  img.action {
+    display: block;
+    cursor: pointer;
+  }
+  img.action-hovered {
+    display: none;
+  }
+  &:hover {
+    img.action-hovered {
+      display: block;
+    }
+    img.action-hovered {
+      display: none;
+    }
+  }
+}
+
+// id column hide
+.nb-theme-custom-theme {
+  ng2-smart-table > table .id {
+    display: none;
+  }
+  ng2-smart-table > table td:first-child {
+    display: none;
+  }
+}
+
+.custom-add {
+  display: flex;
+  align-items: end;
+  position: relative;
+  .add-form {
+    input {
+      margin-left: 10px;
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: 667px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .add-form {
+      input {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+$page1: "cp"; //counter-party
+$page2: "ms"; //material-page
+$page3: "ls"; //location page
+$page4: "ps"; //price-page
+$page5: "oao"; //Offer and Orders
+$page6: "tp"; // Tours page
+
+$pages: $page1, $page2, $page3, $page4, $page5, $page6;
+
+@each $page in $pages {
+  .hd-#{$page}-1 th:nth-child(1),
+  .hd-#{$page}-1 td:nth-child(1),
+  .hd-#{$page}-2 th:nth-child(2),
+  .hd-#{$page}-2 td:nth-child(2),
+  .hd-#{$page}-3 th:nth-child(3),
+  .hd-#{$page}-3 td:nth-child(3),
+  .hd-#{$page}-4 th:nth-child(4),
+  .hd-#{$page}-4 td:nth-child(4),
+  .hd-#{$page}-5 th:nth-child(5),
+  .hd-#{$page}-5 td:nth-child(5),
+  .hd-#{$page}-6 th:nth-child(6),
+  .hd-#{$page}-6 td:nth-child(6),
+  .hd-#{$page}-7 th:nth-child(7),
+  .hd-#{$page}-7 td:nth-child(7),
+  .hd-#{$page}-8 th:nth-child(8),
+  .hd-#{$page}-8 td:nth-child(8),
+  .hd-#{$page}-9 th:nth-child(9),
+  .hd-#{$page}-9 td:nth-child(9),
+  .hd-#{$page}-10 th:nth-child(10),
+  .hd-#{$page}-10 td:nth-child(10),
+  .hd-#{$page}-11 th:nth-child(11),
+  .hd-#{$page}-11 td:nth-child(11),
+  .hd-#{$page}-12 th:nth-child(12),
+  .hd-#{$page}-12 td:nth-child(12),
+  .hd-#{$page}-13 th:nth-child(13),
+  .hd-#{$page}-13 td:nth-child(13) ,
+  .hd-#{$page}-14 th:nth-child(14),
+  .hd-#{$page}-14 td:nth-child(14) ,
+  .hd-#{$page}-15 th:nth-child(15),
+  .hd-#{$page}-15 td:nth-child(15)  {
+    display: none;
+  }
+}
+
+$orders: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+@each $order in $orders {
+  .order-#{$order} {
+    order: #{$order};
+  }
+}
+
+.text-bold .nb-tree-grid-cell {
+  font-weight: 700;
+}
+
+
+.nb-theme-custom-theme .nb-tree-grid-row{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  color: #252C32;
+}
+
+.nb-theme-custom-theme .nb-tree-grid-header-change-sort-button{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  color: #6E7C87;
+  outline: none;
+}
+
+.action-v-btns{
+  margin-left: auto;
+  position: absolute;
+  right: 15px;
+}
+
+.nb-theme-custom-theme nb-card-footer{
+  border: none;
+  .back-buttton{
+    float: right;
+  }
+}
+.position-top{
+  top: 12px !important;
+}
+
+.cdk-overlay-pane{
+  overflow-y: auto;
+}
+
+.main-form-title{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 48px;
+  color: #252C32;
+}
