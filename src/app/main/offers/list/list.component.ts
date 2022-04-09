@@ -29,8 +29,8 @@ import { FilterViewComponent } from "../modal/filter-view/filter-view.component"
 export class ListComponent implements OnInit, OnDestroy {
   hideCols = "hd-oao-1";
   settings = settingsEN;
-  source: LocalDataSource = new LocalDataSource();
   orderType = orderTypeEN;
+  source: LocalDataSource = new LocalDataSource();
   private destroy$: Subject<void> = new Subject<void>();
 
   constructor(

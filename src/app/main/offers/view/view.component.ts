@@ -21,8 +21,8 @@ export class ViewComponent implements OnInit, OnDestroy {
   routeID: string;
   viewDetails;
   settings: any = settingsEN;
-  source = new LocalDataSource();
   tourTypes = tourTypesEN;
+  source = new LocalDataSource();
   private destroy$: Subject<void> = new Subject<void>();
 
   constructor(

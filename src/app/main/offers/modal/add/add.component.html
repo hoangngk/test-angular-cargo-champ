@@ -7,14 +7,625 @@
     }}
     {{ "OFFERADDEDITTPAGE.title" | translate }}
   </nb-card-header>
-  <nb-card-body>Data id: {{ data }}</nb-card-body>
+  <nb-card-body>
+    <form [formGroup]="offerForm">
+      <div class="form-group">
+        <input
+          type="text"
+          nbInput
+          fullWidth
+          placeholder="ID"
+          formControlName="id"
+        />
+      </div>
+      <div class="box">
+        <div class="form-group">
+          <nb-select
+            fullWidth
+            placeholder="Billed to contact"
+            formControlName="billedToContact"
+          >
+            <nb-option
+              *ngFor="let item of billedToContactOptions"
+              [value]="item"
+            >
+              {{ item }}
+            </nb-option>
+          </nb-select>
+        </div>
+        <div class="form-group d-flex">
+          <input type="text" nbInput placeholder="New Contact" #newLoading />
+          <a
+            class="add_button"
+            nbButton
+            status="primary"
+            size="small"
+            style="cursor: pointer"
+            (click)="addNewContact(newLoading.value)"
+          >
+            Add New
+          </a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="form-group">
+          <input
+            nbInput
+            fullWidth
+            placeholder="Valid From Calendar"
+            [nbDatepicker]="validFrom"
+            formControlName="validFrom"
+          />
+          <nb-datepicker #validFrom></nb-datepicker>
+        </div>
+        <div class="form-group">
+          <input
+            nbInput
+            fullWidth
+            placeholder="Valid To (Calendar)"
+            [nbDatepicker]="validTo"
+            formControlName="validTo"
+          />
+          <nb-datepicker #validTo></nb-datepicker>
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          nbInput
+          fullWidth
+          placeholder="Reference (text)"
+          formControlName="reference"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          nbInput
+          fullWidth
+          placeholder="To refer to (text)"
+          formControlName="toReferTo"
+        />
+      </div>
+
+      <div formArrayName="transactions">
+        <div *ngFor="let form of transactions.controls; let i = index">
+          <form [formGroup]="form">
+            <nb-accordion>
+              <nb-accordion-item [expanded]="true">
+                <nb-accordion-item-header>
+                  {{ form.value.type }}
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="form-group">
+                    <nb-select
+                      formControlName="type"
+                      (selectedChange)="changeForm($event, i)"
+                    >
+                      <nb-option value="freight">Type (Freight)</nb-option>
+                      <nb-option value="trading">Type (Trading)</nb-option>
+                      <nb-option value="disposal">Type (Disposal)</nb-option>
+                    </nb-select>
+                  </div>
+                  <div [ngSwitch]="form.value.type">
+                    <div *ngSwitchCase="'freight'">
+                      <p>Transport Costs</p>
+                      <p>Freight</p>
+                      <div class="box">
+                        <div class="form-group">
+                          <nb-select
+                            fullWidth
+                            placeholder="Loading"
+                            formControlName="loading"
+                          >
+                            <nb-option
+                              *ngFor="let item of loadingOptions"
+                              [value]="item"
+                            >
+                              {{ item }}
+                            </nb-option>
+                          </nb-select>
+                        </div>
+                        <div class="form-group d-flex">
+                          <input
+                            type="text"
+                            nbInput
+                            placeholder="Add loading"
+                            #newLoading
+                            [ngModelOptions]="{ standalone: true }"
+                          />
+                          <a
+                            class="add_button"
+                            nbButton
+                            status="primary"
+                            size="small"
+                            style="cursor: pointer"
+                            (click)="addNewLoading(newLoading.value)"
+                          >
+                            Add New
+                          </a>
+                        </div>
+                      </div>
+                      <div class="box">
+                        <div class="form-group">
+                          <nb-select
+                            fullWidth
+                            placeholder="Unloading"
+                            formControlName="unloading"
+                          >
+                            <nb-option
+                              *ngFor="let item of unloadingOptions"
+                              [value]="item"
+                            >
+                              {{ item }}
+                            </nb-option>
+                          </nb-select>
+                        </div>
+                        <div class="form-group d-flex">
+                          <input
+                            type="text"
+                            nbInput
+                            placeholder="Add unloading"
+                            #newUnloading
+                            [ngModelOptions]="{ standalone: true }"
+                          />
+                          <a
+                            class="add_button"
+                            nbButton
+                            status="primary"
+                            size="small"
+                            style="cursor: pointer"
+                            (click)="addNewUnloading(newUnloading.value)"
+                          >
+                            Add New
+                          </a>
+                        </div>
+                      </div>
+                      <div class="box">
+                        <div class="box">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              fullWidth
+                              nbInput
+                              placeholder="Amount"
+                              formControlName="amount"
+                            />
+                          </div>
+                          <div class="form-group d-flex">
+                            <label for="">Unit</label>
+                            <input
+                              type="text"
+                              fullWidth
+                              nbInput
+                              placeholder="Unit"
+                              formControlName="unit"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            nbInput
+                            fullWidth
+                            placeholder="Price per unit"
+                            formControlName="pricePerUnit"
+                          />
+                        </div>
+                      </div>
+                      <div class="box">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            nbInput
+                            fullWidth
+                            placeholder="Minimum price"
+                            formControlName="minimumPrice"
+                          />
+                        </div>
+                      </div>
+                      <div class="box">
+                        <div class="form-group">
+                          <textarea
+                            nbInput
+                            fullWidth
+                            placeholder="Comments"
+                            formControlName="comments"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                        <button nbButton (click)="removeTransactionForm(i)">
+                          Cancel
+                        </button>
+                        <button nbButton status="primary" class="ml-2">
+                          Confirm
+                        </button>
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'trading'">
+                      <p>Transport Costs</p>
+                      <p>Trading</p>
+                      <div class="box">
+                        <div class="form-group">
+                          <nb-select
+                            fullWidth
+                            placeholder="Unloading"
+                            formControlName="unloading"
+                          >
+                            <nb-option
+                              *ngFor="let item of unloadingOptions"
+                              [value]="item"
+                            >
+                              {{ item }}
+                            </nb-option>
+                          </nb-select>
+                        </div>
+                        <div class="form-group d-flex">
+                          <input
+                            type="text"
+                            nbInput
+                            placeholder="Add unloading"
+                            #newUnloading
+                            [ngModelOptions]="{ standalone: true }"
+                          />
+                          <a
+                            class="add_button"
+                            nbButton
+                            status="primary"
+                            size="small"
+                            style="cursor: pointer"
+                            (click)="addNewUnloading(newUnloading.value)"
+                          >
+                            Add New
+                          </a>
+                        </div>
+                      </div>
+                      <div formArrayName="materials">
+                        <div
+                          *ngFor="
+                            let subForm of form.get('materials').controls;
+                            let i = index
+                          "
+                        >
+                          <form [formGroup]="subForm">
+                            <nb-accordion>
+                              <nb-accordion-item [expanded]="true">
+                                <nb-accordion-item-header>
+                                  Product Details
+                                </nb-accordion-item-header>
+                                <nb-accordion-item-body>
+                                  <div class="box">
+                                    <div class="form-group">
+                                      <nb-select
+                                        fullWidth
+                                        placeholder="Material"
+                                        formControlName="material"
+                                      >
+                                        <nb-option
+                                          *ngFor="let item of materialsOptions"
+                                          [value]="item"
+                                        >
+                                          {{ item }}
+                                        </nb-option>
+                                      </nb-select>
+                                    </div>
+                                    <div class="form-group d-flex">
+                                      <input
+                                        type="text"
+                                        nbInput
+                                        placeholder="New material"
+                                        #newMaterial
+                                        [ngModelOptions]="{ standalone: true }"
+                                      />
+                                      <a
+                                        class="add_button"
+                                        nbButton
+                                        status="primary"
+                                        size="small"
+                                        style="cursor: pointer"
+                                        (click)="
+                                          addNewMaterialOption(
+                                            newMaterial.value
+                                          )
+                                        "
+                                      >
+                                        Add New
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="box">
+                                    <div class="box">
+                                      <div class="form-group">
+                                        <input
+                                          type="text"
+                                          fullWidth
+                                          nbInput
+                                          placeholder="Amount"
+                                          formControlName="amount"
+                                        />
+                                      </div>
+                                      <div class="form-group d-flex">
+                                        <label for="">Unit</label>
+                                        <nb-select
+                                          fullWidth
+                                          formControlName="unit"
+                                        >
+                                          <nb-option [value]="'m3'"
+                                            >m3</nb-option
+                                          >
+                                        </nb-select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="box">
+                                    <div class="form-group">
+                                      <input
+                                        type="text"
+                                        nbInput
+                                        fullWidth
+                                        placeholder="Price per unit"
+                                        formControlName="pricePerUnit"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <button
+                                      nbButton
+                                      (click)="removeMaterialForm(form, i)"
+                                    >
+                                      Cancel
+                                    </button>
+                                    <button
+                                      nbButton
+                                      status="primary"
+                                      class="ml-2"
+                                    >
+                                      Confirm
+                                    </button>
+                                  </div>
+                                </nb-accordion-item-body>
+                              </nb-accordion-item>
+                            </nb-accordion>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <button
+                          type="button"
+                          nbButton
+                          status="primary"
+                          (click)="addNewMaterialForTradingForm(form)"
+                        >
+                          Add Material
+                        </button>
+                      </div>
+                      <div class="form-group">
+                        <textarea
+                          nbInput
+                          fullWidth
+                          placeholder="Comments"
+                        ></textarea>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                        <button nbButton (click)="removeTransactionForm(i)">
+                          Cancel
+                        </button>
+                        <button nbButton status="primary" class="ml-2">
+                          Confirm
+                        </button>
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'disposal'">
+                      <p>Transport Costs</p>
+                      <p>Disposal</p>
+                      <div class="box">
+                        <div class="form-group">
+                          <nb-select
+                            fullWidth
+                            placeholder="Loading"
+                            formControlName="loading"
+                          >
+                            <nb-option
+                              *ngFor="let item of loadingOptions"
+                              [value]="item"
+                            >
+                              {{ item }}
+                            </nb-option>
+                          </nb-select>
+                        </div>
+                        <div class="form-group d-flex">
+                          <input
+                            type="text"
+                            nbInput
+                            placeholder="Add loading"
+                            #newLoading
+                            [ngModelOptions]="{ standalone: true }"
+                          />
+                          <a
+                            class="add_button"
+                            nbButton
+                            status="primary"
+                            size="small"
+                            style="cursor: pointer"
+                            (click)="addNewLoading(newLoading.value)"
+                          >
+                            Add New
+                          </a>
+                        </div>
+                      </div>
+                      <div formArrayName="materials">
+                        <div
+                          *ngFor="
+                            let subForm of form.get('materials').controls;
+                            let i = index
+                          "
+                        >
+                          <form [formGroup]="subForm">
+                            <nb-accordion>
+                              <nb-accordion-item [expanded]="true">
+                                <nb-accordion-item-header>
+                                  Product Details
+                                </nb-accordion-item-header>
+                                <nb-accordion-item-body>
+                                  <div class="box">
+                                    <div class="form-group">
+                                      <nb-select
+                                        fullWidth
+                                        placeholder="Material"
+                                        formControlName="material"
+                                      >
+                                        <nb-option
+                                          *ngFor="let item of materialsOptions"
+                                          [value]="item"
+                                        >
+                                          {{ item }}
+                                        </nb-option>
+                                      </nb-select>
+                                    </div>
+                                    <div class="form-group d-flex">
+                                      <input
+                                        type="text"
+                                        nbInput
+                                        placeholder="New material"
+                                        #newMaterial
+                                        [ngModelOptions]="{ standalone: true }"
+                                      />
+                                      <a
+                                        class="add_button"
+                                        nbButton
+                                        status="primary"
+                                        size="small"
+                                        style="cursor: pointer"
+                                        (click)="
+                                          addNewMaterialOption(
+                                            newMaterial.value
+                                          )
+                                        "
+                                      >
+                                        Add New
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="box">
+                                    <div class="box">
+                                      <div class="form-group">
+                                        <input
+                                          type="text"
+                                          fullWidth
+                                          nbInput
+                                          placeholder="Amount"
+                                          formControlName="amount"
+                                        />
+                                      </div>
+                                      <div class="form-group d-flex">
+                                        <label for="">Unit</label>
+                                        <nb-select
+                                          fullWidth
+                                          formControlName="unit"
+                                        >
+                                          <nb-option [value]="'m3'"
+                                            >m3</nb-option
+                                          >
+                                        </nb-select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="box">
+                                    <div class="form-group">
+                                      <input
+                                        type="text"
+                                        nbInput
+                                        fullWidth
+                                        placeholder="Price per unit"
+                                        formControlName="pricePerUnit"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="box">
+                                    <div class="form-group">
+                                      <input
+                                        type="text"
+                                        nbInput
+                                        fullWidth
+                                        placeholder="Minimum Price"
+                                        formControlName="minimumPrice"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <button
+                                      nbButton
+                                      (click)="removeMaterialForm(form, i)"
+                                    >
+                                      Cancel
+                                    </button>
+                                    <button
+                                      nbButton
+                                      status="primary"
+                                      class="ml-2"
+                                    >
+                                      Confirm
+                                    </button>
+                                  </div>
+                                </nb-accordion-item-body>
+                              </nb-accordion-item>
+                            </nb-accordion>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <button
+                          type="button"
+                          nbButton
+                          status="primary"
+                          (click)="addNewMaterialForDisposalForm(form)"
+                        >
+                          Add Material
+                        </button>
+                      </div>
+                      <div class="form-group">
+                        <textarea
+                          nbInput
+                          fullWidth
+                          placeholder="Comments"
+                        ></textarea>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                        <button nbButton (click)="removeTransactionForm(i)">
+                          Cancel
+                        </button>
+                        <button nbButton status="primary" class="ml-2">
+                          Confirm
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+          </form>
+        </div>
+        <button
+          type="button"
+          nbButton
+          status="primary"
+          (click)="addNewTransaction()"
+        >
+          Add New Transaction +
+        </button>
+      </div>
+    </form>
+  </nb-card-body>
   <nb-card-footer>
     <div class="action">
       <button nbButton (click)="dismiss()">
         {{ "OFFERADDEDITTPAGE.action.back.title" | translate }}
       </button>
 
-      <button nbButton status="primary" (click)="saveMaterialDetails()">
+      <button nbButton status="primary" (click)="onSubmit()">
         {{ "OFFERADDEDITTPAGE.action.confirm.title" | translate }}
       </button>
     </div>

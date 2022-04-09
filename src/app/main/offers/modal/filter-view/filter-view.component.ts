@@ -16,8 +16,8 @@ import { OffersService } from "../../../../core/services/offers.service";
 export class FilterViewComponent {
   @Input() data: any;
   hideColumnArray = [];
-  settings;
   columns = [];
+  settings;
 
   constructor(
     protected ref: NbDialogRef<FilterViewComponent>,
