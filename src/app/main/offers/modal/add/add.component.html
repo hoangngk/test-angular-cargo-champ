@@ -21,6 +21,8 @@
       <div class="box">
         <div class="form-group">
           <nb-select
+            style="min-width: 250px"
+            class="options"
             fullWidth
             placeholder="Billed to contact"
             formControlName="billedToContact"
@@ -92,19 +94,60 @@
         <div *ngFor="let form of transactions.controls; let i = index">
           <form [formGroup]="form">
             <nb-accordion>
-              <nb-accordion-item [expanded]="true">
+              <nb-accordion-item #acc [expanded]="true">
                 <nb-accordion-item-header>
-                  {{ form.value.type }}
+                  <div class="w-100" *ngIf="acc.collapsedValue">
+                    <div [ngSwitch]="form.value.type">
+                      <div *ngSwitchCase="'freight'">
+                        <div class="row w-100">
+                          <div class="col-4">
+                            {{ form.value.type }}: {{ form.value.loading }} to
+                            {{ form.value.unloading }}
+                          </div>
+                          <div class="col-4">
+                            Amount:
+                            {{ form.value.amount }}
+                            {{ form.value.unit }}
+                            at {{ form.value.pricePerUnit }}/tonne
+                          </div>
+                          <div class="col-4">
+                            Minimum Price:
+                            {{ form.value.minimumPrice }}
+                          </div>
+                        </div>
+                      </div>
+                      <div *ngSwitchCase="'trading'">
+                        <div class="row w-100">
+                          <div class="col-6">
+                            {{ form.value.type }}: Unload at
+                            {{ form.value.unloading }}
+                          </div>
+                          <div class="col-6"></div>
+                        </div>
+                      </div>
+                      <div *ngSwitchCase="'disposal'">
+                        <div class="row w-100">
+                          <div class="col-6">
+                            {{ form.value.type }}: Load to
+                            {{ form.value.loading }}
+                          </div>
+                          <div class="col-6"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </nb-accordion-item-header>
                 <nb-accordion-item-body>
                   <div class="form-group">
                     <nb-select
+                      style="min-width: 250px"
+                      class="options"
                       formControlName="type"
                       (selectedChange)="changeForm($event, i)"
                     >
-                      <nb-option value="freight">Type (Freight)</nb-option>
-                      <nb-option value="trading">Type (Trading)</nb-option>
-                      <nb-option value="disposal">Type (Disposal)</nb-option>
+                      <nb-option value="freight">Freight</nb-option>
+                      <nb-option value="trading">Trading</nb-option>
+                      <nb-option value="disposal">Disposal</nb-option>
                     </nb-select>
                   </div>
                   <div [ngSwitch]="form.value.type">
@@ -114,6 +157,8 @@
                       <div class="box">
                         <div class="form-group">
                           <nb-select
+                            style="min-width: 250px"
+                            class="options"
                             fullWidth
                             placeholder="Loading"
                             formControlName="loading"
@@ -149,6 +194,8 @@
                       <div class="box">
                         <div class="form-group">
                           <nb-select
+                            style="min-width: 250px"
+                            class="options"
                             fullWidth
                             placeholder="Unloading"
                             formControlName="unloading"
@@ -251,6 +298,8 @@
                       <div class="box">
                         <div class="form-group">
                           <nb-select
+                            style="min-width: 250px"
+                            class="options"
                             fullWidth
                             placeholder="Unloading"
                             formControlName="unloading"
@@ -292,14 +341,30 @@
                         >
                           <form [formGroup]="subForm">
                             <nb-accordion>
-                              <nb-accordion-item [expanded]="true">
+                              <nb-accordion-item #subAcc [expanded]="true">
                                 <nb-accordion-item-header>
-                                  Product Details
+                                  <div
+                                    class="w-100"
+                                    *ngIf="subAcc.collapsedValue"
+                                  >
+                                    <div class="row">
+                                      <div class="col-6">
+                                        Material:
+                                        {{ subForm.value.material }} at
+                                        {{ subForm.value.amount }}
+                                        {{ subForm.value.unit }} at
+                                        {{ subForm.value.pricePerUnit }}
+                                      </div>
+                                      <div class="col-6"></div>
+                                    </div>
+                                  </div>
                                 </nb-accordion-item-header>
                                 <nb-accordion-item-body>
                                   <div class="box">
                                     <div class="form-group">
                                       <nb-select
+                                        style="min-width: 250px"
+                                        class="options"
                                         fullWidth
                                         placeholder="Material"
                                         formControlName="material"
@@ -350,6 +415,8 @@
                                       <div class="form-group d-flex">
                                         <label for="">Unit</label>
                                         <nb-select
+                                          style="min-width: 250px"
+                                          class="options"
                                           fullWidth
                                           formControlName="unit"
                                         >
@@ -424,6 +491,8 @@
                       <div class="box">
                         <div class="form-group">
                           <nb-select
+                            style="min-width: 250px"
+                            class="options"
                             fullWidth
                             placeholder="Loading"
                             formControlName="loading"
@@ -465,14 +534,33 @@
                         >
                           <form [formGroup]="subForm">
                             <nb-accordion>
-                              <nb-accordion-item [expanded]="true">
+                              <nb-accordion-item #subAcc [expanded]="true">
                                 <nb-accordion-item-header>
-                                  Product Details
+                                  <div
+                                    class="w-100"
+                                    *ngIf="subAcc.collapsedValue"
+                                  >
+                                    <div class="row">
+                                      <div class="col-6">
+                                        Material:
+                                        {{ subForm.value.material }} at
+                                        {{ subForm.value.amount }}
+                                        {{ subForm.value.unit }} at
+                                        {{ subForm.value.pricePerUnit }}
+                                      </div>
+                                      <div class="col-6">
+                                        Minimum Price:
+                                        {{ subForm.value.minimumPrice }}
+                                      </div>
+                                    </div>
+                                  </div>
                                 </nb-accordion-item-header>
                                 <nb-accordion-item-body>
                                   <div class="box">
                                     <div class="form-group">
                                       <nb-select
+                                        style="min-width: 250px"
+                                        class="options"
                                         fullWidth
                                         placeholder="Material"
                                         formControlName="material"
@@ -523,6 +611,8 @@
                                       <div class="form-group d-flex">
                                         <label for="">Unit</label>
                                         <nb-select
+                                          style="min-width: 250px"
+                                          class="options"
                                           fullWidth
                                           formControlName="unit"
                                         >
