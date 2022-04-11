@@ -46,7 +46,6 @@ export class FilterViewComponent {
         this.hideColumnArray.splice(index, 1);
       }
     }
-    console.log(this.hideColumnArray);
   }
 
   dismiss() {
